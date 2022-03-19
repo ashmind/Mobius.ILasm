@@ -107,6 +107,20 @@ namespace Mobius.ILasm.Tests
             Assert.Single(errors, "Unexpected syntax: missing first item");
         }
 
+        [Fact]
+        public void Box_AssemblyOnlyArgument_IsReported()
+        {
+            var errors = AssembleAndGetErrors(@"
+                .method void M() cil managed
+                {
+                    box [mscorlib]
+                    ret
+                }
+            ");
+
+            Assert.Single(errors, "Unexpected instruction argument: expected BaseTypeRef, received String '['");
+        }
+
         private static IReadOnlyList<string> AssembleAndGetErrors(string il)
         {
             var logger = new Mock<ILogger>();

@@ -173,6 +173,18 @@ namespace Mono.ILASM
             return new PermPair((PEAPI.SecurityAction)securityAction, permissionSet);
         }
 
+        bool TryCastArgumentOrLogError<T>(object value, out T result)
+        {
+            if (!(value is T typed))
+            {
+                result = default;
+                logger.Error(tokenizer.Location, $"Unexpected instruction argument: expected {typeof(T).Name}, received {value.GetType().Name} '{value}'");
+                return false;
+            }
+            result = typed;
+            return true;
+        }
+
         public ILParser(CodeGen codegen, ILTokenizer tokenizer, IManifestResourceResolver resourceResolver, ILogger logger, Dictionary<string, string> errors)
         {
             this.codegen = codegen;
@@ -4984,10 +4996,12 @@ namespace Mono.ILASM
         }
 
         void case_500()
-#line 2541 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
+#line default
         {
-            codegen.CurrentMethodDef.AddInstr(new TypeInstr((TypeOp)yyVals[-1 + yyTop],
-                    (BaseTypeRef)yyVals[0 + yyTop], tokenizer.Location));
+            if (!TryCastArgumentOrLogError<BaseTypeRef>(yyVals[0 + yyTop], out var type))
+                return;
+
+            codegen.CurrentMethodDef.AddInstr(new TypeInstr((TypeOp)yyVals[-1 + yyTop], type, tokenizer.Location));
         }
 
         void case_501()
