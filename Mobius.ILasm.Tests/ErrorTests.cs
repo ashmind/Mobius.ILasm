@@ -93,6 +93,20 @@ namespace Mobius.ILasm.Tests
             Assert.Single(errors, "Byte array argument of ldc.r8 must include at least 8 bytes");
         }
 
+        [Fact]
+        public void LocalsInit_StartingWithComma_IsReported()
+        {
+            var errors = AssembleAndGetErrors(@"
+                .method void M() cil managed
+                {
+                    .locals init ( ,int32 a )
+                    ret
+                }
+            ");
+
+            Assert.Single(errors, "Unexpected syntax: missing first item");
+        }
+
         private static IReadOnlyList<string> AssembleAndGetErrors(string il)
         {
             var logger = new Mock<ILogger>();

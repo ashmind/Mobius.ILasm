@@ -4616,9 +4616,14 @@ namespace Mono.ILASM
         }
 
         void case_457()
-#line 2228 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
+#line default
         {
             ArrayList local_list = (ArrayList)yyVals[-2 + yyTop];
+            if (local_list == null)
+            {
+                logger.Error(tokenizer.Location, "Unexpected syntax: missing first item");
+                return;
+            }
             local_list.Add(yyVals[0 + yyTop]);
         }
 
