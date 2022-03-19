@@ -2,9 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Mobius.ILasm.Core;
-using Mobius.ILasm.infrastructure;
 using Mobius.ILasm.interfaces;
-using Mono.ILASM;
 using Moq;
 using Xunit;
 
@@ -13,7 +11,7 @@ namespace Mobius.ILasm.Tests
     public class ErrorTests
     {
         [Fact]
-        public void Duplicate_ClassMethod_IsReportedy()
+        public void Duplicate_ClassMethod_IsReported()
         {
             var errors = AssembleAndGetErrors(@"
                 .class C
@@ -50,7 +48,7 @@ namespace Mobius.ILasm.Tests
                 }
             ");
 
-            Assert.Single(errors, "Duplicate method declaration: int32 f");
+            Assert.Single(errors, "Duplicate field declaration: System.Int32 f");
         }
 
         [Fact]
@@ -59,6 +57,40 @@ namespace Mobius.ILasm.Tests
             var errors = AssembleAndGetErrors(@".mresource public NoSuchFile.txt {}");
 
             Assert.Single(errors, $"Resource file 'NoSuchFile.txt' was not found");
+        }
+
+        [Theory]
+        [InlineData("")]
+        [InlineData("01")]
+        [InlineData("01 02 03")]
+        public void Ldc_R4_InsuffientByteLength_IsReported(string bytes)
+        {
+            var errors = AssembleAndGetErrors(@"
+                .method void M() cil managed
+                {
+                    ldc.r4 (" + bytes + @")
+                    ret
+                }
+            ");
+
+            Assert.Single(errors, "Byte array argument of ldc.r4 must include at least 4 bytes");
+        }
+
+        [Theory]
+        [InlineData("")]
+        [InlineData("01")]
+        [InlineData("01 02 03 04 05 06 07")]
+        public void Ldc_R8_InsuffientByteLength_IsReported(string bytes)
+        {
+            var errors = AssembleAndGetErrors(@"
+                .method void M() cil managed
+                {
+                    ldc.r8 (" + bytes + @")
+                    ret
+                }
+            ");
+
+            Assert.Single(errors, "Byte array argument of ldc.r8 must include at least 8 bytes");
         }
 
         private static IReadOnlyList<string> AssembleAndGetErrors(string il)

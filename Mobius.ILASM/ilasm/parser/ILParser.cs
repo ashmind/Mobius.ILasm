@@ -4895,13 +4895,19 @@ namespace Mono.ILASM
         }
 
         void case_494()
-#line 2484 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
+#line default
         {
             byte[] fpdata;
             switch ((MiscInstr)yyVals[-1 + yyTop])
             {
                 case MiscInstr.ldc_r4:
                     fpdata = (byte[])yyVals[0 + yyTop];
+                    // It is not clear if we should disallow Length > 4, e.g. ilasm.exe does not
+                    if (fpdata.Length < 4)
+                    {
+                        logger.Error(tokenizer.Location, "Byte array argument of ldc.r4 must include at least 4 bytes");
+                        return;
+                    }
                     if (!BitConverter.IsLittleEndian)
                     {
                         System.Array.Reverse(fpdata, 0, 4);
@@ -4911,6 +4917,12 @@ namespace Mono.ILASM
                     break;
                 case MiscInstr.ldc_r8:
                     fpdata = (byte[])yyVals[0 + yyTop];
+                    // It is not clear if we should disallow Length > 8, e.g. ilasm.exe does not
+                    if (fpdata.Length < 8)
+                    {
+                        logger.Error(tokenizer.Location, "Byte array argument of ldc.r8 must include at least 8 bytes");
+                        return;
+                    }
                     if (!BitConverter.IsLittleEndian)
                     {
                         System.Array.Reverse(fpdata, 0, 8);
