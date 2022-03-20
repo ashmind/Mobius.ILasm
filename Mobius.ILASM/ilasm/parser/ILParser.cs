@@ -173,12 +173,12 @@ namespace Mono.ILASM
             return new PermPair((PEAPI.SecurityAction)securityAction, permissionSet);
         }
 
-        bool TryCastArgumentOrLogError<T>(object value, out T result)
+        bool TryCastStateOrLogError<T>(object value, out T result)
         {
             if (!(value is T typed))
             {
                 result = default;
-                logger.Error(tokenizer.Location, $"Unexpected instruction argument: expected {typeof(T).Name}, received {value.GetType().Name} '{value}'");
+                logger.Error(tokenizer.Location, $"Failed to parse {value.GetType().Name} '{value}' as {typeof(T).Name}");
                 return false;
             }
             result = typed;
@@ -4967,10 +4967,12 @@ namespace Mono.ILASM
         }
 
         void case_497()
-#line 2518 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
+#line default
         {
-            codegen.CurrentMethodDef.AddInstr(new MethodInstr((MethodOp)yyVals[-1 + yyTop],
-                    (BaseMethodRef)yyVals[0 + yyTop], tokenizer.Location));
+            if (!TryCastStateOrLogError<BaseMethodRef>(yyVals[0 + yyTop], out var method))
+                return;
+
+            codegen.CurrentMethodDef.AddInstr(new MethodInstr((MethodOp)yyVals[-1 + yyTop], method, tokenizer.Location));
         }
 
         void case_498()
@@ -4998,7 +5000,7 @@ namespace Mono.ILASM
         void case_500()
 #line default
         {
-            if (!TryCastArgumentOrLogError<BaseTypeRef>(yyVals[0 + yyTop], out var type))
+            if (!TryCastStateOrLogError<BaseTypeRef>(yyVals[0 + yyTop], out var type))
                 return;
 
             codegen.CurrentMethodDef.AddInstr(new TypeInstr((TypeOp)yyVals[-1 + yyTop], type, tokenizer.Location));
@@ -5077,9 +5079,10 @@ namespace Mono.ILASM
         }
 
         void case_508()
-#line 2613 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
+#line default
         {
-            BaseTypeRef owner = (BaseTypeRef)yyVals[-6 + yyTop];
+            if (!TryCastStateOrLogError<BaseTypeRef>(yyVals[-6 + yyTop], out var owner))
+                return;
             ArrayList arg_list = (ArrayList)yyVals[-1 + yyTop];
             GenericArguments ga = (GenericArguments)yyVals[-3 + yyTop];
             BaseTypeRef[] param_list;

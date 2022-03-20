@@ -22,7 +22,7 @@ namespace Mobius.ILasm.Tests
                 }
             ");
 
-            Assert.Single(errors, "Duplicate method declaration: instance System.Void Test()");
+            Assert.Equal(new[] { "Duplicate method declaration: instance System.Void Test()" }, errors);
         }
 
         [Fact]
@@ -33,7 +33,7 @@ namespace Mobius.ILasm.Tests
                 .method void Test() cil managed {}
             ");
 
-            Assert.Single(errors, "Duplicate method declaration: instance System.Void Test()");
+            Assert.Equal(new[] { "Duplicate method declaration: instance System.Void Test()" }, errors);
         }
 
         [Fact]
@@ -48,7 +48,7 @@ namespace Mobius.ILasm.Tests
                 }
             ");
 
-            Assert.Single(errors, "Duplicate field declaration: System.Int32 f");
+            Assert.Equal(new[] { "Duplicate field declaration: System.Int32 f" }, errors);
         }
 
         [Fact]
@@ -56,7 +56,7 @@ namespace Mobius.ILasm.Tests
         {
             var errors = AssembleAndGetErrors(@".mresource public NoSuchFile.txt {}");
 
-            Assert.Single(errors, $"Resource file 'NoSuchFile.txt' was not found");
+            Assert.Equal(new[] { "Resource file 'NoSuchFile.txt' was not found" }, errors);
         }
 
         [Theory]
@@ -73,7 +73,7 @@ namespace Mobius.ILasm.Tests
                 }
             ");
 
-            Assert.Single(errors, "Byte array argument of ldc.r4 must include at least 4 bytes");
+            Assert.Equal(new[] { "Byte array argument of ldc.r4 must include at least 4 bytes" }, errors);
         }
 
         [Theory]
@@ -90,7 +90,7 @@ namespace Mobius.ILasm.Tests
                 }
             ");
 
-            Assert.Single(errors, "Byte array argument of ldc.r8 must include at least 8 bytes");
+            Assert.Equal(new[] { "Byte array argument of ldc.r8 must include at least 8 bytes" }, errors);
         }
 
         [Fact]
@@ -104,11 +104,11 @@ namespace Mobius.ILasm.Tests
                 }
             ");
 
-            Assert.Single(errors, "Unexpected syntax: missing first item");
+            Assert.Equal(new[] { "Unexpected syntax: missing first item" }, errors);
         }
 
         [Fact]
-        public void Box_AssemblyOnlyArgument_IsReported()
+        public void Box_InvalidTypeRefSyntax_IsReported()
         {
             var errors = AssembleAndGetErrors(@"
                 .method void M() cil managed
@@ -118,7 +118,24 @@ namespace Mobius.ILasm.Tests
                 }
             ");
 
-            Assert.Single(errors, "Unexpected instruction argument: expected BaseTypeRef, received String '['");
+            Assert.Equal(new[] { "Failed to parse String '[' as BaseTypeRef" }, errors);
+        }
+
+        [Fact]
+        public void Call_InvalidMethodRefSyntax_IsReported()
+        {
+            var errors = AssembleAndGetErrors(@"
+                .method void M() cil managed
+                {
+                    call void [System.Console]::WriteLine(int32)
+                    ret
+                }
+            ");
+
+            Assert.Equal(new[] {
+                "Failed to parse String '[' as BaseTypeRef",
+                "Failed to parse CallConv 'Default' as BaseMethodRef"
+            }, errors);
         }
 
         private static IReadOnlyList<string> AssembleAndGetErrors(string il)
