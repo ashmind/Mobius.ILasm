@@ -138,6 +138,23 @@ namespace Mobius.ILasm.Tests
             }, errors);
         }
 
+        [Theory]
+        [InlineData("")]
+        [InlineData("int32")]
+        [InlineData("int32 y")]
+        public void Ldarg_InvalidParameterName_IsReported(string parameters)
+        {
+            var errors = AssembleAndGetErrors(@"
+                .method void M(" + parameters + @") cil managed
+                {
+                    ldarg x
+                    ret
+                }
+            ");
+
+            Assert.Equal(new[] { "Undeclared identifier 'x'" }, errors);
+        }
+
         private static IReadOnlyList<string> AssembleAndGetErrors(string il)
         {
             var logger = new Mock<ILogger>();

@@ -307,21 +307,21 @@ namespace Mono.ILASM
         }
 
         public int GetNamedParamPos(string name)
-        {
-            int pos = -1;
+        {            
             if (param_list == null)
                 return -1;
 
+            var pos = -1;
             if (!IsStatic)
                 pos++;
             foreach (ParamDef param in param_list)
             {
                 pos++;
-                if (param.Name.CompareTo(name) == 0)
+                if (param.Name != null && param.Name.Equals(name))
                     return pos;
             }
 
-            return pos;
+            return -1;
         }
 
         public LocalVariableEntry[] GetLocalVars()

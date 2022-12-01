@@ -4837,7 +4837,7 @@ namespace Mono.ILASM
         }
 
         void case_488()
-#line 2431 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
+#line default
         {
             int pos = codegen.CurrentMethodDef.GetNamedParamPos((string)yyVals[0 + yyTop]);
             if (pos < 0)
