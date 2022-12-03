@@ -87,7 +87,7 @@ namespace Mono.ILASM
                 symwriter = new SymbolWriter(output_file);
 
             type_manager = new TypeManager(this);
-            extern_table = new ExternTable(logger);
+            extern_table = new ExternTable(logger, errors);
             typedef_stack = new ArrayList();
             typedef_stack_top = 0;
             global_field_table = new Hashtable();

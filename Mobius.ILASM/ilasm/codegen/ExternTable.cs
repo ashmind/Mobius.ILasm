@@ -318,7 +318,7 @@ namespace Mono.ILASM
         ILogger logger;
         private Dictionary<string, string> errors;
 
-        public ExternTable(ILogger logger)
+        public ExternTable(ILogger logger, Dictionary<string, string> errors)
         {
             this.logger = logger;
             this.errors = errors;

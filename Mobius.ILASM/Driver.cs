@@ -25,8 +25,10 @@ namespace Mobius.ILasm.Core
         // private bool show_method_def = false;
         // private bool show_method_ref = false;
         private bool scan_only = false;
+#if HAS_MONO_SECURITY
         private bool keycontainer = false;
         private string keyname;
+#endif
 
         private CodeGen codegen;
         private readonly ILogger logger;
@@ -106,20 +108,18 @@ namespace Mobius.ILasm.Core
                     errors[nameof(Driver)] = "No entry point found.";
                 }
 
+#if HAS_MONO_SECURITY
                 // if we have a key and aren't assembling a netmodule
                 if ((keyname != null) && !codegen.IsThisAssembly(null))
                 {
-#if HAS_MONO_SECURITY
-    						LoadKey ();
-    						// this overrides any attribute or .publickey directive in the source
-    						codegen.ThisAssembly.SetPublicKey (sn.PublicKey);
-#else
-                    throw new NotSupportedException();
-#endif
+    				LoadKey ();
+    				// this overrides any attribute or .publickey directive in the source
+    				codegen.ThisAssembly.SetPublicKey (sn.PublicKey);
                 }
+#endif
 
                 try
-                {
+            {
                     codegen.Write();
                 }
                 catch

@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections;
 using System.Text;
 using System.Reflection;
+using System.Collections.Generic;
 
 namespace PEAPI {
 
@@ -5657,7 +5658,7 @@ namespace PEAPI {
 		uint sizeOfHeader;
 		char[] name;
 		Hashtable htable = new Hashtable();
-		Hashtable btable = new Hashtable (new ByteArrayHashCodeProvider (), new ByteArrayComparer ());
+		private IDictionary<byte[], uint> btable = new Dictionary<byte[], uint>(ByteArrayEqualityComparer.Default);
 		bool addInitByte = false;
 		bool initByteAdded = false;
 
@@ -5734,16 +5735,15 @@ namespace PEAPI {
 		internal uint Add (byte[] str, bool prependSize) 
 		{
 			AddInitByte ();
-			Object val = btable [str];
 			uint index = 0;
-			if (val == null) {
+			if (!btable.TryGetValue(str, out var val)) {
 				index = size;
 				btable [str] = index;
 				if (prependSize) CompressNum ((uint) str.Length);
 				Write (str);
 				size = (uint) Seek (0, SeekOrigin.Current);
 			} else {
-				index = (uint) val;
+				index = val;
 			}
 			return index;
 		}
@@ -5925,40 +5925,32 @@ namespace PEAPI {
 
 	}
 
-	/**************************************************************************/  
-	class ByteArrayComparer : IComparer {
+	/**************************************************************************/
+    class ByteArrayEqualityComparer : IEqualityComparer<byte[]>
+    {
+        public static ByteArrayEqualityComparer Default { get; } = new ByteArrayEqualityComparer();
 
-		public int Compare (object x, object y)
-		{
-			byte [] a = (byte []) x;
-			byte [] b = (byte []) y;
-			int len = a.Length;
+        public bool Equals(byte[] x, byte[] y)
+        {
+            var len = x.Length;
+            if (y.Length != len)
+                return false;
 
-			if (b.Length != len)
-				return 1;
+            for (var i = 0; i < len; ++i)
+                if (x[i] != y[i])
+                    return false;
+            return true;
+        }
 
-			for (int i = 0; i < len; ++i)
-				if (a [i] != b [i])
-					return 1;
-			return 0;
-		}
-	}
+        public int GetHashCode(byte[] obj)
+        {
+            var len = obj.Length;
+            var h = 0;
 
-	class ByteArrayHashCodeProvider : IHashCodeProvider {
+            for (var i = 0; i < len; ++i)
+                h = (h << 5) - h + obj[i];
 
-		public int GetHashCode (Object key)
-		{
-			byte [] arr = (byte []) key;
-			int len = arr.Length;
-			int h = 0;
-
-			for (int i = 0; i < len; ++i)
-				h = (h << 5) - h + arr [i];
-
-			return h;
-		}
-
-	}
-
-
+            return h;
+        }
+    }
 }
