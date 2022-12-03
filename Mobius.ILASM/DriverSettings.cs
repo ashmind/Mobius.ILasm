@@ -11,5 +11,6 @@ namespace Mobius.ILasm.Core
         public bool ShowParser { get; set; }
         public bool DebuggingInfo { get; set; }
         public bool ShowTokens { get; set; }
+        public bool NoAutoInherit { get; set; }
     }
 }

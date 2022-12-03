@@ -37,7 +37,6 @@ namespace Mobius.ILasm.Core
 #if HAS_MONO_SECURITY
     			private StrongName sn;
 #endif
-        bool noautoinherit;
 
         public Driver(ILogger logger, Target target, DriverSettings settings = null)
         {
@@ -86,7 +85,7 @@ namespace Mobius.ILasm.Core
             //    output_file = CreateOutputFilename();
             try
             {
-                codegen = new CodeGen(logger, "", outputStream, target == Target.Dll, settings.DebuggingInfo, noautoinherit,
+                codegen = new CodeGen(logger, "", outputStream, target == Target.Dll, settings.DebuggingInfo, settings.NoAutoInherit,
                     errors);
                 foreach (MemoryStream inputStream in inputStreams)
                 {

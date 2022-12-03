@@ -20,7 +20,8 @@ namespace Mobius.ILasm
                 var driver = new Driver(logger, parsedArgs.Target, new DriverSettings {
                     ShowParser = parsedArgs.ShowParser,
                     DebuggingInfo = parsedArgs.Debug,
-                    ShowTokens = parsedArgs.ShowTokens
+                    ShowTokens = parsedArgs.ShowTokens,
+                    NoAutoInherit = parsedArgs.NoAutoInherit
                 });
                 driver.Assemble(new [] { File.ReadAllText(parsedArgs.InputFile) }, memoryStream);
                 memoryStream.Seek(0, SeekOrigin.Begin);
