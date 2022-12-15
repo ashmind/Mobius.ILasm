@@ -139,7 +139,7 @@ namespace Mono.ILASM
 
         PermPair PermissionSetBytesToPermPair(short securityAction, byte[] permissionSetBlob)
         {
-            if (permissionSetBlob[0] == (byte)'.')
+            if (permissionSetBlob.Length > 0 && permissionSetBlob[0] == (byte)'.')
             {
                 // See ECMA-335 6th Edition II.22.11 for explanation on the newer format.
                 // > [Note: The first edition of this standard specified an XML encoding of a permission set.
