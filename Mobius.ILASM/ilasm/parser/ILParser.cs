@@ -1249,43 +1249,36 @@ namespace Mono.ILASM
                             case_17();
                             break;
                         case 18:
-#line 529 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.SetSubSystem((int)yyVals[0 + yyTop]);
                             }
                             break;
                         case 19:
-#line 533 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.SetCorFlags((int)yyVals[0 + yyTop]);
                             }
                             break;
                         case 21:
-#line 538 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.SetImageBase((long)yyVals[0 + yyTop]);
                             }
                             break;
                         case 22:
-#line 542 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.SetStackReserve((long)yyVals[0 + yyTop]);
                             }
                             break;
                         case 38:
-#line 573 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.CurrentNameSpace = null;
                             }
                             break;
                         case 39:
-#line 579 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.CurrentNameSpace = (string)yyVals[0 + yyTop];
                             }
                             break;
                         case 40:
-#line 585 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.EndTypeDef();
                             }
@@ -1297,103 +1290,78 @@ namespace Mono.ILASM
                             case_42();
                             break;
                         case 43:
-#line 608 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-1 + yyTop] | TypeAttr.Public; }
                             break;
                         case 44:
-#line 609 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-1 + yyTop] | TypeAttr.Private; }
                             break;
                         case 45:
-#line 610 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-2 + yyTop] | TypeAttr.NestedPrivate; }
                             break;
                         case 46:
-#line 611 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-2 + yyTop] | TypeAttr.NestedPublic; }
                             break;
                         case 47:
-#line 612 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-2 + yyTop] | TypeAttr.NestedFamily; }
                             break;
                         case 48:
-#line 613 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-2 + yyTop] | TypeAttr.NestedAssembly; }
                             break;
                         case 49:
-#line 614 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-2 + yyTop] | TypeAttr.NestedFamAndAssem; }
                             break;
                         case 50:
-#line 615 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-2 + yyTop] | TypeAttr.NestedFamOrAssem; }
                             break;
                         case 51:
-#line 616 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { is_value_class = true; }
                             break;
                         case 52:
-#line 617 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { is_enum_class = true; }
                             break;
                         case 53:
-#line 618 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-1 + yyTop] | TypeAttr.Interface; }
                             break;
                         case 54:
-#line 619 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-1 + yyTop] | TypeAttr.Sealed; }
                             break;
                         case 55:
-#line 620 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-1 + yyTop] | TypeAttr.Abstract; }
                             break;
                         case 56:
-#line 621 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { }
                             break;
                         case 57:
-#line 622 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-1 + yyTop] | TypeAttr.SequentialLayout; }
                             break;
                         case 58:
-#line 623 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-1 + yyTop] | TypeAttr.ExplicitLayout; }
                             break;
                         case 59:
-#line 624 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { }
                             break;
                         case 60:
-#line 625 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-1 + yyTop] | TypeAttr.UnicodeClass; }
                             break;
                         case 61:
-#line 626 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-1 + yyTop] | TypeAttr.AutoClass; }
                             break;
                         case 62:
-#line 627 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-1 + yyTop] | TypeAttr.Import; }
                             break;
                         case 63:
-#line 628 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-1 + yyTop] | TypeAttr.Serializable; }
                             break;
                         case 64:
-#line 629 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-1 + yyTop] | TypeAttr.BeforeFieldInit; }
                             break;
                         case 65:
-#line 630 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-1 + yyTop] | TypeAttr.SpecialName; }
                             break;
                         case 66:
-#line 631 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-1 + yyTop] | TypeAttr.RTSpecialName; }
                             break;
                         case 68:
-#line 638 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = yyVals[0 + yyTop];
                             }
@@ -1405,13 +1373,11 @@ namespace Mono.ILASM
                             case_72();
                             break;
                         case 74:
-#line 664 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = yyVals[-1 + yyTop];
                             }
                             break;
                         case 76:
-#line 671 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = yyVals[-1 + yyTop];
                             }
@@ -1423,7 +1389,6 @@ namespace Mono.ILASM
                             case_78();
                             break;
                         case 80:
-#line 691 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = yyVals[-1 + yyTop];
                             }
@@ -1435,13 +1400,11 @@ namespace Mono.ILASM
                             case_82();
                             break;
                         case 83:
-#line 712 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = yyVals[0 + yyTop];
                             }
                             break;
                         case 84:
-#line 716 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.Object, "System.Object", logger, errors);
                             }
@@ -1468,43 +1431,36 @@ namespace Mono.ILASM
                             case_91();
                             break;
                         case 92:
-#line 773 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PEAPI.GenericParamAttributes();
                             }
                             break;
                         case 93:
-#line 777 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (PEAPI.GenericParamAttributes)yyVals[-1 + yyTop] | PEAPI.GenericParamAttributes.Covariant;
                             }
                             break;
                         case 94:
-#line 781 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (PEAPI.GenericParamAttributes)yyVals[-1 + yyTop] | PEAPI.GenericParamAttributes.Contravariant;
                             }
                             break;
                         case 95:
-#line 785 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (PEAPI.GenericParamAttributes)yyVals[-1 + yyTop] | PEAPI.GenericParamAttributes.DefaultConstructorConstrait;
                             }
                             break;
                         case 96:
-#line 789 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (PEAPI.GenericParamAttributes)yyVals[-1 + yyTop] | PEAPI.GenericParamAttributes.NotNullableValueTypeConstraint;
                             }
                             break;
                         case 97:
-#line 793 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (PEAPI.GenericParamAttributes)yyVals[-1 + yyTop] | PEAPI.GenericParamAttributes.ReferenceTypeConstraint;
                             }
                             break;
                         case 98:
-#line 799 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = yyVals[0 + yyTop];
                             }
@@ -1522,7 +1478,6 @@ namespace Mono.ILASM
                             case_102();
                             break;
                         case 104:
-#line 840 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = String.Format("{0}/{1}", yyVals[-2 + yyTop], yyVals[0 + yyTop]);
                             }
@@ -1537,7 +1492,6 @@ namespace Mono.ILASM
                             case_107();
                             break;
                         case 116:
-#line 884 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 AddSecDecl(yyVals[0 + yyTop], false);
                             }
@@ -1546,13 +1500,11 @@ namespace Mono.ILASM
                             case_118();
                             break;
                         case 120:
-#line 895 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.CurrentTypeDef.SetSize((int)yyVals[0 + yyTop]);
                             }
                             break;
                         case 121:
-#line 899 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.CurrentTypeDef.SetPack((int)yyVals[0 + yyTop]);
                             }
@@ -1561,7 +1513,6 @@ namespace Mono.ILASM
                             case_122();
                             break;
                         case 125:
-#line 932 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = GetTypeRef((BaseTypeRef)yyVals[0 + yyTop]);
                             }
@@ -1597,91 +1548,76 @@ namespace Mono.ILASM
                             case_135();
                             break;
                         case 136:
-#line 1006 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new MethodPointerTypeRef((CallConv)yyVals[-5 + yyTop], (BaseTypeRef)yyVals[-4 + yyTop], (ArrayList)yyVals[-1 + yyTop], logger, errors);
                             }
                             break;
                         case 138:
-#line 1013 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.Int8, "System.SByte", logger, errors);
                             }
                             break;
                         case 139:
-#line 1017 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.Int16, "System.Int16", logger, errors);
                             }
                             break;
                         case 140:
-#line 1021 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.Int32, "System.Int32", logger, errors);
                             }
                             break;
                         case 141:
-#line 1025 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.Int64, "System.Int64", logger, errors);
                             }
                             break;
                         case 142:
-#line 1029 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.Float32, "System.Single", logger, errors);
                             }
                             break;
                         case 143:
-#line 1033 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.Float64, "System.Double", logger, errors);
                             }
                             break;
                         case 144:
-#line 1037 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.UInt8, "System.Byte", logger, errors);
                             }
                             break;
                         case 145:
-#line 1041 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.UInt8, "System.Byte", logger, errors);
                             }
                             break;
                         case 146:
-#line 1045 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.UInt16, "System.UInt16", logger, errors);
                             }
                             break;
                         case 147:
-#line 1049 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.UInt16, "System.UInt16", logger, errors);
                             }
                             break;
                         case 148:
-#line 1053 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.UInt32, "System.UInt32", logger, errors);
                             }
                             break;
                         case 149:
-#line 1057 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.UInt32, "System.UInt32", logger, errors);
                             }
                             break;
                         case 150:
-#line 1061 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.UInt64, "System.UInt64", logger, errors);
                             }
                             break;
                         case 151:
-#line 1065 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.UInt64, "System.UInt64", logger, errors);
                             }
@@ -1690,13 +1626,11 @@ namespace Mono.ILASM
                             case_152();
                             break;
                         case 153:
-#line 1074 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.NativeUInt, "System.UIntPtr", logger, errors);
                             }
                             break;
                         case 154:
-#line 1078 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.NativeUInt, "System.UIntPtr", logger, errors);
                             }
@@ -1705,31 +1639,26 @@ namespace Mono.ILASM
                             case_155();
                             break;
                         case 156:
-#line 1087 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.Char, "System.Char", logger, errors);
                             }
                             break;
                         case 157:
-#line 1091 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.Char, "System.Char", logger, errors);
                             }
                             break;
                         case 158:
-#line 1095 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.Void, "System.Void", logger, errors);
                             }
                             break;
                         case 159:
-#line 1099 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.Boolean, "System.Boolean", logger, errors);
                             }
                             break;
                         case 160:
-#line 1103 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PrimitiveTypeRef(PrimitiveType.String, "System.String", logger, errors);
                             }
@@ -1756,193 +1685,161 @@ namespace Mono.ILASM
                             case_167();
                             break;
                         case 168:
-#line 1160 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (CallConv)yyVals[0 + yyTop] | CallConv.Instance;
                             }
                             break;
                         case 169:
-#line 1164 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (CallConv)yyVals[0 + yyTop] | CallConv.InstanceExplicit;
                             }
                             break;
                         case 171:
-#line 1171 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new CallConv();
                             }
                             break;
                         case 172:
-#line 1175 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = CallConv.Default;
                             }
                             break;
                         case 173:
-#line 1179 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = CallConv.Vararg;
                             }
                             break;
                         case 174:
-#line 1183 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = CallConv.Cdecl;
                             }
                             break;
                         case 175:
-#line 1187 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = CallConv.Stdcall;
                             }
                             break;
                         case 176:
-#line 1191 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = CallConv.Thiscall;
                             }
                             break;
                         case 177:
-#line 1195 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = CallConv.Fastcall;
                             }
                             break;
                         case 179:
-#line 1202 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new CustomMarshaller((string)yyVals[-3 + yyTop], (string)yyVals[-1 + yyTop]);
                             }
                             break;
                         case 180:
-#line 1206 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new FixedSysString((uint)(int)yyVals[-1 + yyTop]);
                             }
                             break;
                         case 181:
-#line 1210 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new FixedArray((int)yyVals[-1 + yyTop]);
                             }
                             break;
                         case 183:
-#line 1215 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.Currency;
                             }
                             break;
                         case 185:
-#line 1220 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.Void;
                             }
                             break;
                         case 186:
-#line 1224 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.Boolean;
                             }
                             break;
                         case 187:
-#line 1228 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.Int8;
                             }
                             break;
                         case 188:
-#line 1232 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.Int16;
                             }
                             break;
                         case 189:
-#line 1236 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.Int32;
                             }
                             break;
                         case 190:
-#line 1240 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.Int64;
                             }
                             break;
                         case 191:
-#line 1244 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.Float32;
                             }
                             break;
                         case 192:
-#line 1248 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.Float64;
                             }
                             break;
                         case 193:
-#line 1252 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.Error;
                             }
                             break;
                         case 194:
-#line 1256 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.UInt8;
                             }
                             break;
                         case 195:
-#line 1260 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.UInt8;
                             }
                             break;
                         case 196:
-#line 1264 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.UInt16;
                             }
                             break;
                         case 197:
-#line 1268 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.UInt16;
                             }
                             break;
                         case 198:
-#line 1272 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.UInt32;
                             }
                             break;
                         case 199:
-#line 1276 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.UInt32;
                             }
                             break;
                         case 200:
-#line 1280 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.UInt64;
                             }
                             break;
                         case 201:
-#line 1284 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.UInt64;
                             }
                             break;
                         case 203:
-#line 1289 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new NativeArray((NativeType)yyVals[-2 + yyTop]);
                             }
                             break;
                         case 204:
-#line 1293 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new NativeArray((NativeType)yyVals[-3 + yyTop], (int)yyVals[-1 + yyTop], 0, 0);
                             }
@@ -1954,55 +1851,46 @@ namespace Mono.ILASM
                             case_206();
                             break;
                         case 209:
-#line 1309 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.BStr;
                             }
                             break;
                         case 210:
-#line 1313 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.LPStr;
                             }
                             break;
                         case 211:
-#line 1317 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.LPWStr;
                             }
                             break;
                         case 212:
-#line 1321 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.LPTStr;
                             }
                             break;
                         case 213:
-#line 1325 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.ByValStr;
                             }
                             break;
                         case 215:
-#line 1330 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.IUnknown;
                             }
                             break;
                         case 216:
-#line 1334 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.IDispatch;
                             }
                             break;
                         case 217:
-#line 1338 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.Struct;
                             }
                             break;
                         case 218:
-#line 1342 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.Interface;
                             }
@@ -2011,169 +1899,141 @@ namespace Mono.ILASM
                             case_219();
                             break;
                         case 221:
-#line 1354 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.Int;
                             }
                             break;
                         case 222:
-#line 1358 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.UInt;
                             }
                             break;
                         case 224:
-#line 1363 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.ByValStr;
                             }
                             break;
                         case 225:
-#line 1367 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.AnsiBStr;
                             }
                             break;
                         case 226:
-#line 1371 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.TBstr;
                             }
                             break;
                         case 227:
-#line 1375 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.VariantBool;
                             }
                             break;
                         case 228:
-#line 1379 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.FuncPtr;
                             }
                             break;
                         case 229:
-#line 1383 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.AsAny;
                             }
                             break;
                         case 230:
-#line 1387 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = NativeType.LPStruct;
                             }
                             break;
                         case 233:
-#line 1395 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = SafeArrayType.variant;
                             }
                             break;
                         case 234:
-#line 1399 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = SafeArrayType.currency;
                             }
                             break;
                         case 236:
-#line 1404 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = SafeArrayType.boolean;
                             }
                             break;
                         case 237:
-#line 1408 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = SafeArrayType.int8;
                             }
                             break;
                         case 238:
-#line 1412 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = SafeArrayType.int16;
                             }
                             break;
                         case 239:
-#line 1416 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = SafeArrayType.int32;
                             }
                             break;
                         case 241:
-#line 1421 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = SafeArrayType.float32;
                             }
                             break;
                         case 242:
-#line 1425 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = SafeArrayType.float64;
                             }
                             break;
                         case 243:
-#line 1429 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = SafeArrayType.uint8;
                             }
                             break;
                         case 244:
-#line 1433 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = SafeArrayType.uint16;
                             }
                             break;
                         case 245:
-#line 1437 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = SafeArrayType.uint32;
                             }
                             break;
                         case 251:
-#line 1446 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = SafeArrayType.Decimal;
                             }
                             break;
                         case 252:
-#line 1450 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = SafeArrayType.date;
                             }
                             break;
                         case 253:
-#line 1454 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = SafeArrayType.bstr;
                             }
                             break;
                         case 256:
-#line 1460 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = SafeArrayType.unknown;
                             }
                             break;
                         case 257:
-#line 1464 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = SafeArrayType.unknown;
                             }
                             break;
                         case 259:
-#line 1469 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = SafeArrayType.Int;
                             }
                             break;
                         case 260:
-#line 1473 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = SafeArrayType.UInt;
                             }
                             break;
                         case 261:
-#line 1477 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = SafeArrayType.error;
                             }
@@ -2182,79 +2042,66 @@ namespace Mono.ILASM
                             case_277();
                             break;
                         case 279:
-#line 1523 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = yyVals[-1 + yyTop];
                             }
                             break;
                         case 280:
-#line 1529 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new FieldAttr();
                             }
                             break;
                         case 281:
-#line 1533 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (FieldAttr)yyVals[-1 + yyTop] | FieldAttr.Public;
                             }
                             break;
                         case 282:
-#line 1537 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (FieldAttr)yyVals[-1 + yyTop] | FieldAttr.Private;
                             }
                             break;
                         case 283:
-#line 1541 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (FieldAttr)yyVals[-1 + yyTop] | FieldAttr.Family;
                             }
                             break;
                         case 284:
-#line 1545 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (FieldAttr)yyVals[-1 + yyTop] | FieldAttr.Assembly;
                             }
                             break;
                         case 285:
-#line 1549 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (FieldAttr)yyVals[-1 + yyTop] | FieldAttr.FamAndAssem;
                             }
                             break;
                         case 286:
-#line 1553 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (FieldAttr)yyVals[-1 + yyTop] | FieldAttr.FamOrAssem;
                             }
                             break;
                         case 287:
-#line 1557 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 /* This is just 0x0000*/
                             }
                             break;
                         case 288:
-#line 1561 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (FieldAttr)yyVals[-1 + yyTop] | FieldAttr.Static;
                             }
                             break;
                         case 289:
-#line 1565 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (FieldAttr)yyVals[-1 + yyTop] | FieldAttr.Initonly;
                             }
                             break;
                         case 290:
-#line 1569 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (FieldAttr)yyVals[-1 + yyTop] | FieldAttr.RTSpecialName;
                             }
                             break;
                         case 291:
-#line 1573 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (FieldAttr)yyVals[-1 + yyTop] | FieldAttr.SpecialName;
                             }
@@ -2263,121 +2110,101 @@ namespace Mono.ILASM
                             case_292();
                             break;
                         case 293:
-#line 1582 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (FieldAttr)yyVals[-1 + yyTop] | FieldAttr.Literal;
                             }
                             break;
                         case 294:
-#line 1586 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (FieldAttr)yyVals[-1 + yyTop] | FieldAttr.Notserialized;
                             }
                             break;
                         case 296:
-#line 1593 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = yyVals[0 + yyTop];
                             }
                             break;
                         case 298:
-#line 1600 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = yyVals[0 + yyTop];
                             }
                             break;
                         case 299:
-#line 1606 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new FloatConst(Convert.ToSingle(yyVals[-1 + yyTop]));
                             }
                             break;
                         case 300:
-#line 1610 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new DoubleConst(Convert.ToDouble(yyVals[-1 + yyTop]));
                             }
                             break;
                         case 301:
-#line 1614 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new FloatConst(BitConverter.ToSingle(BitConverter.GetBytes((long)yyVals[-1 + yyTop]), BitConverter.IsLittleEndian ? 0 : 4));
                             }
                             break;
                         case 302:
-#line 1618 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new DoubleConst(BitConverter.Int64BitsToDouble((long)yyVals[-1 + yyTop]));
                             }
                             break;
                         case 303:
-#line 1622 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new IntConst(Convert.ToInt64(yyVals[-1 + yyTop]));
                             }
                             break;
                         case 304:
-#line 1626 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new UIntConst(Convert.ToUInt64((ulong)(long)yyVals[-1 + yyTop]));
                             }
                             break;
                         case 305:
-#line 1630 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new IntConst((int)((long)yyVals[-1 + yyTop]));
                             }
                             break;
                         case 306:
-#line 1634 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new UIntConst((uint)((long)yyVals[-1 + yyTop]));
                             }
                             break;
                         case 307:
-#line 1638 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new IntConst((short)((long)yyVals[-1 + yyTop]));
                             }
                             break;
                         case 308:
-#line 1642 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new UIntConst((ushort)((long)yyVals[-1 + yyTop]));
                             }
                             break;
                         case 309:
-#line 1646 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new CharConst(Convert.ToChar(yyVals[-1 + yyTop]));
                             }
                             break;
                         case 310:
-#line 1650 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new CharConst(Convert.ToChar(yyVals[-1 + yyTop]));
                             }
                             break;
                         case 311:
-#line 1654 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new IntConst((sbyte)((long)(yyVals[-1 + yyTop])));
                             }
                             break;
                         case 312:
-#line 1658 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new UIntConst((byte)((long)(yyVals[-1 + yyTop])));
                             }
                             break;
                         case 313:
-#line 1662 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new BoolConst((bool)yyVals[-1 + yyTop]);
                             }
                             break;
                         case 315:
-#line 1669 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new ByteArrConst((byte[])yyVals[0 + yyTop]);
                             }
@@ -2386,19 +2213,16 @@ namespace Mono.ILASM
                             case_317();
                             break;
                         case 318:
-#line 1681 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new NullConst();
                             }
                             break;
                         case 320:
-#line 1688 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new StringConst((string)yyVals[-1 + yyTop]);
                             }
                             break;
                         case 322:
-#line 1699 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new List<BoolConst>() { new BoolConst((bool)yyVals[0 + yyTop]) };
                             }
@@ -2410,31 +2234,25 @@ namespace Mono.ILASM
                             case_324();
                             break;
                         case 325:
-#line 1730 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new DataDef((string)yyVals[-1 + yyTop], (DataSegment)yyVals[-2 + yyTop]);
                             }
                             break;
                         case 326:
-#line 1734 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new DataDef(String.Empty, (DataSegment)yyVals[0 + yyTop]);
                             }
                             break;
                         case 327:
-#line 1737 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = DataSegment.Data; }
                             break;
                         case 328:
-#line 1738 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = DataSegment.TLS; }
                             break;
                         case 329:
-#line 1739 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = DataSegment.CIL; }
                             break;
                         case 330:
-#line 1745 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = yyVals[-1 + yyTop];
                             }
@@ -2446,13 +2264,11 @@ namespace Mono.ILASM
                             case_333();
                             break;
                         case 334:
-#line 1765 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new StringConst((string)yyVals[-1 + yyTop]);
                             }
                             break;
                         case 335:
-#line 1769 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new StringConst((string)yyVals[-1 + yyTop]);
                             }
@@ -2461,7 +2277,6 @@ namespace Mono.ILASM
                             case_336();
                             break;
                         case 337:
-#line 1778 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new ByteArrConst((byte[])yyVals[0 + yyTop]);
                             }
@@ -2506,7 +2321,6 @@ namespace Mono.ILASM
                             case_350();
                             break;
                         case 351:
-#line 1900 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.EndMethodDef(tokenizer.Location);
                             }
@@ -2518,79 +2332,60 @@ namespace Mono.ILASM
                             case_353();
                             break;
                         case 354:
-#line 1939 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = new MethAttr(); }
                             break;
                         case 355:
-#line 1940 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (MethAttr)yyVals[-1 + yyTop] | MethAttr.Static; }
                             break;
                         case 356:
-#line 1941 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (MethAttr)yyVals[-1 + yyTop] | MethAttr.Public; }
                             break;
                         case 357:
-#line 1942 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (MethAttr)yyVals[-1 + yyTop] | MethAttr.Private; }
                             break;
                         case 358:
-#line 1943 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (MethAttr)yyVals[-1 + yyTop] | MethAttr.Family; }
                             break;
                         case 359:
-#line 1944 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (MethAttr)yyVals[-1 + yyTop] | MethAttr.Assembly; }
                             break;
                         case 360:
-#line 1945 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (MethAttr)yyVals[-1 + yyTop] | MethAttr.FamAndAssem; }
                             break;
                         case 361:
-#line 1946 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (MethAttr)yyVals[-1 + yyTop] | MethAttr.FamOrAssem; }
                             break;
                         case 362:
-#line 1947 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { /* CHECK HEADERS */ }
                             break;
                         case 363:
-#line 1948 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (MethAttr)yyVals[-1 + yyTop] | MethAttr.Final; }
                             break;
                         case 364:
-#line 1949 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (MethAttr)yyVals[-1 + yyTop] | MethAttr.Virtual; }
                             break;
                         case 365:
-#line 1950 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (MethAttr)yyVals[-1 + yyTop] | MethAttr.Abstract; }
                             break;
                         case 366:
-#line 1951 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (MethAttr)yyVals[-1 + yyTop] | MethAttr.HideBySig; }
                             break;
                         case 367:
-#line 1952 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (MethAttr)yyVals[-1 + yyTop] | MethAttr.NewSlot; }
                             break;
                         case 368:
-#line 1953 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (MethAttr)yyVals[-1 + yyTop] | MethAttr.RequireSecObject; }
                             break;
                         case 369:
-#line 1954 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (MethAttr)yyVals[-1 + yyTop] | MethAttr.SpecialName; }
                             break;
                         case 370:
-#line 1955 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (MethAttr)yyVals[-1 + yyTop] | MethAttr.RTSpecialName; }
                             break;
                         case 371:
-#line 1956 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (MethAttr)yyVals[-1 + yyTop] | MethAttr.Strict; }
                             break;
                         case 372:
-#line 1957 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { /* Do nothing */ }
                             break;
                         case 374:
@@ -2603,139 +2398,105 @@ namespace Mono.ILASM
                             case_376();
                             break;
                         case 377:
-#line 1983 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = new PInvokeAttr(); }
                             break;
                         case 378:
-#line 1984 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (PInvokeAttr)yyVals[-1 + yyTop] | PInvokeAttr.nomangle; }
                             break;
                         case 379:
-#line 1985 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (PInvokeAttr)yyVals[-1 + yyTop] | PInvokeAttr.ansi; }
                             break;
                         case 380:
-#line 1986 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (PInvokeAttr)yyVals[-1 + yyTop] | PInvokeAttr.unicode; }
                             break;
                         case 381:
-#line 1987 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (PInvokeAttr)yyVals[-1 + yyTop] | PInvokeAttr.autochar; }
                             break;
                         case 382:
-#line 1988 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (PInvokeAttr)yyVals[-1 + yyTop] | PInvokeAttr.lasterr; }
                             break;
                         case 383:
-#line 1989 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (PInvokeAttr)yyVals[-1 + yyTop] | PInvokeAttr.winapi; }
                             break;
                         case 384:
-#line 1990 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (PInvokeAttr)yyVals[-1 + yyTop] | PInvokeAttr.cdecl; }
                             break;
                         case 385:
-#line 1991 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (PInvokeAttr)yyVals[-1 + yyTop] | PInvokeAttr.stdcall; }
                             break;
                         case 386:
-#line 1992 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (PInvokeAttr)yyVals[-1 + yyTop] | PInvokeAttr.thiscall; }
                             break;
                         case 387:
-#line 1993 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (PInvokeAttr)yyVals[-1 + yyTop] | PInvokeAttr.fastcall; }
                             break;
                         case 388:
-#line 1994 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (PInvokeAttr)yyVals[-3 + yyTop] | PInvokeAttr.bestfit_on; }
                             break;
                         case 389:
-#line 1995 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (PInvokeAttr)yyVals[-3 + yyTop] | PInvokeAttr.bestfit_off; }
                             break;
                         case 390:
-#line 1996 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (PInvokeAttr)yyVals[-3 + yyTop] | PInvokeAttr.charmaperror_on; }
                             break;
                         case 391:
-#line 1997 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (PInvokeAttr)yyVals[-3 + yyTop] | PInvokeAttr.charmaperror_off; }
                             break;
                         case 395:
-#line 2005 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = new ParamAttr(); }
                             break;
                         case 396:
-#line 2006 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (ParamAttr)yyVals[-3 + yyTop] | ParamAttr.In; }
                             break;
                         case 397:
-#line 2007 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (ParamAttr)yyVals[-3 + yyTop] | ParamAttr.Out; }
                             break;
                         case 398:
-#line 2008 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (ParamAttr)yyVals[-3 + yyTop] | ParamAttr.Opt; }
                             break;
                         case 399:
-#line 2011 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = new ImplAttr(); }
                             break;
                         case 400:
-#line 2012 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (ImplAttr)yyVals[-1 + yyTop] | ImplAttr.Native; }
                             break;
                         case 401:
-#line 2013 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (ImplAttr)yyVals[-1 + yyTop] | ImplAttr.IL; }
                             break;
                         case 402:
-#line 2014 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (ImplAttr)yyVals[-1 + yyTop] | ImplAttr.IL; }
                             break;
                         case 403:
-#line 2015 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (ImplAttr)yyVals[-1 + yyTop] | ImplAttr.Optil; }
                             break;
                         case 404:
-#line 2016 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { /* should this reset? */ }
                             break;
                         case 405:
-#line 2017 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (ImplAttr)yyVals[-1 + yyTop] | ImplAttr.Unmanaged; }
                             break;
                         case 406:
-#line 2018 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (ImplAttr)yyVals[-1 + yyTop] | ImplAttr.ForwardRef; }
                             break;
                         case 407:
-#line 2019 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (ImplAttr)yyVals[-1 + yyTop] | ImplAttr.PreserveSig; }
                             break;
                         case 408:
-#line 2020 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (ImplAttr)yyVals[-1 + yyTop] | ImplAttr.Runtime; }
                             break;
                         case 409:
-#line 2021 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (ImplAttr)yyVals[-1 + yyTop] | ImplAttr.InternalCall; }
                             break;
                         case 410:
-#line 2022 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (ImplAttr)yyVals[-1 + yyTop] | ImplAttr.Synchronised; }
                             break;
                         case 411:
-#line 2023 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (ImplAttr)yyVals[-1 + yyTop] | ImplAttr.NoInLining; }
                             break;
                         case 412:
-#line 2024 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (ImplAttr)yyVals[-1 + yyTop] | ImplAttr.NoOptimization; }
                             break;
                         case 413:
-#line 2025 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (ImplAttr)yyVals[-1 + yyTop] | ImplAttr.AggressiveInlining; }
                             break;
                         case 416:
@@ -2745,13 +2506,11 @@ namespace Mono.ILASM
                             case_417();
                             break;
                         case 418:
-#line 2049 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new ParamDef((ParamAttr)yyVals[-1 + yyTop], null, (BaseTypeRef)yyVals[0 + yyTop]);
                             }
                             break;
                         case 419:
-#line 2053 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new ParamDef((ParamAttr)yyVals[-2 + yyTop], (string)yyVals[0 + yyTop], (BaseTypeRef)yyVals[-1 + yyTop]);
                             }
@@ -2766,7 +2525,6 @@ namespace Mono.ILASM
                             case_422();
                             break;
                         case 423:
-#line 2078 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new ArrayList(0);
                             }
@@ -2787,7 +2545,6 @@ namespace Mono.ILASM
                             case_432();
                             break;
                         case 433:
-#line 2123 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.CurrentMethodDef.SetMaxStack((int)yyVals[0 + yyTop]);
                             }
@@ -2802,7 +2559,6 @@ namespace Mono.ILASM
                             case_436();
                             break;
                         case 437:
-#line 2147 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.CurrentMethodDef.ZeroInit();
                             }
@@ -2820,13 +2576,11 @@ namespace Mono.ILASM
                             case_445();
                             break;
                         case 447:
-#line 2203 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.CurrentMethodDef.AddLabel((string)yyVals[-1 + yyTop]);
                             }
                             break;
                         case 450:
-#line 2209 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 AddSecDecl(yyVals[0 + yyTop], false);
                             }
@@ -2841,31 +2595,26 @@ namespace Mono.ILASM
                             case_457();
                             break;
                         case 458:
-#line 2237 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new Local(-1, (BaseTypeRef)yyVals[0 + yyTop], errors);
                             }
                             break;
                         case 459:
-#line 2241 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new Local(-1, (string)yyVals[0 + yyTop], (BaseTypeRef)yyVals[-1 + yyTop], errors);
                             }
                             break;
                         case 460:
-#line 2245 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new Local((int)yyVals[-1 + yyTop], (BaseTypeRef)yyVals[0 + yyTop], errors);
                             }
                             break;
                         case 461:
-#line 2249 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new Local((int)yyVals[-2 + yyTop], (string)yyVals[0 + yyTop], (BaseTypeRef)yyVals[-1 + yyTop], errors);
                             }
                             break;
                         case 462:
-#line 2255 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = yyVals[-1 + yyTop];
                             }
@@ -2886,7 +2635,6 @@ namespace Mono.ILASM
                             case_468();
                             break;
                         case 469:
-#line 2308 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new TryBlock((HandlerBlock)yyVals[0 + yyTop], tokenizer.Location);
                             }
@@ -2925,7 +2673,6 @@ namespace Mono.ILASM
                             case_480();
                             break;
                         case 481:
-#line 2390 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
 
                             }
@@ -3003,7 +2750,6 @@ namespace Mono.ILASM
                             case_505();
                             break;
                         case 506:
-#line 2588 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.CurrentMethodDef.AddInstr(new SwitchInstr((ArrayList)yyVals[-1 + yyTop], tokenizer.Location));
                             }
@@ -3027,7 +2773,6 @@ namespace Mono.ILASM
                             case_513();
                             break;
                         case 516:
-#line 2678 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = yyVals[0 + yyTop];
                             }
@@ -3036,13 +2781,11 @@ namespace Mono.ILASM
                             case_517();
                             break;
                         case 518:
-#line 2689 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = codegen.GetGlobalFieldRef((BaseTypeRef)yyVals[-1 + yyTop], (string)yyVals[0 + yyTop]);
                             }
                             break;
                         case 519:
-#line 2695 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.CurrentTypeDef.EndEventDef();
                             }
@@ -3051,19 +2794,16 @@ namespace Mono.ILASM
                             case_520();
                             break;
                         case 522:
-#line 2711 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new FeatureAttr();
                             }
                             break;
                         case 523:
-#line 2715 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (FeatureAttr)yyVals[-1 + yyTop] & FeatureAttr.Rtspecialname;
                             }
                             break;
                         case 524:
-#line 2719 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (FeatureAttr)yyVals[-1 + yyTop] & FeatureAttr.Specialname;
                             }
@@ -3084,7 +2824,6 @@ namespace Mono.ILASM
                             case_531();
                             break;
                         case 534:
-#line 2758 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.CurrentTypeDef.EndPropertyDef();
                             }
@@ -3093,43 +2832,36 @@ namespace Mono.ILASM
                             case_535();
                             break;
                         case 536:
-#line 2777 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new FeatureAttr();
                             }
                             break;
                         case 537:
-#line 2781 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (FeatureAttr)yyVals[-1 + yyTop] | FeatureAttr.Rtspecialname;
                             }
                             break;
                         case 538:
-#line 2785 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (FeatureAttr)yyVals[-1 + yyTop] | FeatureAttr.Specialname;
                             }
                             break;
                         case 539:
-#line 2789 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (FeatureAttr)yyVals[-1 + yyTop] | FeatureAttr.Instance;
                             }
                             break;
                         case 542:
-#line 2799 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.CurrentTypeDef.CurrentProperty.AddSet((MethodRef)yyVals[0 + yyTop]);
                             }
                             break;
                         case 543:
-#line 2803 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.CurrentTypeDef.CurrentProperty.AddGet((MethodRef)yyVals[0 + yyTop]);
                             }
                             break;
                         case 544:
-#line 2807 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.CurrentTypeDef.CurrentProperty.AddOther((MethodRef)yyVals[0 + yyTop]);
                             }
@@ -3138,19 +2870,16 @@ namespace Mono.ILASM
                             case_545();
                             break;
                         case 548:
-#line 2821 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new CustomAttr((BaseMethodRef)yyVals[0 + yyTop], null);
                             }
                             break;
                         case 550:
-#line 2826 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new CustomAttr((BaseMethodRef)yyVals[-2 + yyTop], new ByteArrConst((byte[])yyVals[0 + yyTop]));
                             }
                             break;
                         case 551:
-#line 2830 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new CustomAttr((BaseMethodRef)yyVals[-4 + yyTop], (PEAPI.Constant)yyVals[-1 + yyTop]);
                             }
@@ -3159,13 +2888,11 @@ namespace Mono.ILASM
                             case_555();
                             break;
                         case 556:
-#line 2851 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new ByteArrConst((byte[])yyVals[0 + yyTop]);
                             }
                             break;
                         case 557:
-#line 2855 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new StringConst((string)yyVals[-1 + yyTop]);
                             }
@@ -3177,7 +2904,6 @@ namespace Mono.ILASM
                             case_560();
                             break;
                         case 562:
-#line 2884 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new StringConst(((TypeRef)yyVals[-1 + yyTop]).FullName);
                             }
@@ -3189,13 +2915,11 @@ namespace Mono.ILASM
                             case_564();
                             break;
                         case 565:
-#line 2920 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = TypeSpecToPermPair(yyVals[-4 + yyTop], yyVals[-3 + yyTop], (ArrayList)yyVals[-1 + yyTop]);
                             }
                             break;
                         case 566:
-#line 2924 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = TypeSpecToPermPair(yyVals[-1 + yyTop], yyVals[0 + yyTop], null);
                             }
@@ -3207,7 +2931,6 @@ namespace Mono.ILASM
                             case_568();
                             break;
                         case 569:
-#line 2941 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new MIPermissionSet((PEAPI.SecurityAction)yyVals[-4 + yyTop], (ArrayList)yyVals[-1 + yyTop]);
                             }
@@ -3219,7 +2942,6 @@ namespace Mono.ILASM
                             case_571();
                             break;
                         case 572:
-#line 2961 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new MIPermission((BaseTypeRef)yyVals[-4 + yyTop], (ArrayList)yyVals[-1 + yyTop]);
                             }
@@ -3237,19 +2959,16 @@ namespace Mono.ILASM
                             case_576();
                             break;
                         case 577:
-#line 2993 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new NameValuePair((string)yyVals[-2 + yyTop], (PEAPI.Constant)yyVals[0 + yyTop]);
                             }
                             break;
                         case 578:
-#line 2999 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = MemberTypes.Property;
                             }
                             break;
                         case 579:
-#line 3003 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = MemberTypes.Field;
                             }
@@ -3261,150 +2980,125 @@ namespace Mono.ILASM
                             case_581();
                             break;
                         case 582:
-#line 3023 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new NameValuePair((string)yyVals[-2 + yyTop], yyVals[0 + yyTop]);
                             }
                             break;
                         case 585:
-#line 3031 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = yyVals[-1 + yyTop];
                             }
                             break;
                         case 587:
-#line 3036 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = ClassRefToObject(yyVals[-5 + yyTop], (byte)(int)yyVals[-1 + yyTop]);
                             }
                             break;
                         case 588:
-#line 3040 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = ClassRefToObject(yyVals[-5 + yyTop], (short)(int)yyVals[-1 + yyTop]);
                             }
                             break;
                         case 589:
-#line 3044 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = ClassRefToObject(yyVals[-5 + yyTop], (int)yyVals[-1 + yyTop]);
                             }
                             break;
                         case 590:
-#line 3048 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = ClassRefToObject(yyVals[-3 + yyTop], (int)yyVals[-1 + yyTop]);
                             }
                             break;
                         case 591:
-#line 3054 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = PEAPI.SecurityAction.Request;
                             }
                             break;
                         case 592:
-#line 3058 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = PEAPI.SecurityAction.Demand;
                             }
                             break;
                         case 593:
-#line 3062 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = PEAPI.SecurityAction.Assert;
                             }
                             break;
                         case 594:
-#line 3066 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = PEAPI.SecurityAction.Deny;
                             }
                             break;
                         case 595:
-#line 3070 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = PEAPI.SecurityAction.PermitOnly;
                             }
                             break;
                         case 596:
-#line 3074 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = PEAPI.SecurityAction.LinkDemand;
                             }
                             break;
                         case 597:
-#line 3078 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = PEAPI.SecurityAction.InheritDemand;
                             }
                             break;
                         case 598:
-#line 3082 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = PEAPI.SecurityAction.RequestMinimum;
                             }
                             break;
                         case 599:
-#line 3086 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = PEAPI.SecurityAction.RequestOptional;
                             }
                             break;
                         case 600:
-#line 3090 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = PEAPI.SecurityAction.RequestRefuse;
                             }
                             break;
                         case 601:
-#line 3094 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = PEAPI.SecurityAction.PreJitGrant;
                             }
                             break;
                         case 602:
-#line 3098 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = PEAPI.SecurityAction.PreJitDeny;
                             }
                             break;
                         case 603:
-#line 3102 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = PEAPI.SecurityAction.NonCasDemand;
                             }
                             break;
                         case 604:
-#line 3106 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = PEAPI.SecurityAction.NonCasLinkDemand;
                             }
                             break;
                         case 605:
-#line 3110 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = PEAPI.SecurityAction.NonCasInheritance;
                             }
                             break;
                         case 606:
-#line 3116 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                             }
                             break;
                         case 607:
-#line 3120 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.SetModuleName((string)yyVals[0 + yyTop]);
                             }
                             break;
                         case 608:
-#line 3124 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.ExternTable.AddModule((string)yyVals[0 + yyTop]);
                             }
                             break;
                         case 609:
-#line 3131 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.SetFileRef(new FileRef((string)yyVals[-5 + yyTop], (byte[])yyVals[-1 + yyTop], (bool)yyVals[-6 + yyTop], (bool)yyVals[0 + yyTop]));
                             }
@@ -3413,25 +3107,21 @@ namespace Mono.ILASM
                             case_610();
                             break;
                         case 611:
-#line 3142 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = true;
                             }
                             break;
                         case 612:
-#line 3146 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = false;
                             }
                             break;
                         case 613:
-#line 3152 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = false;
                             }
                             break;
                         case 614:
-#line 3156 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = true;
                             }
@@ -3443,49 +3133,41 @@ namespace Mono.ILASM
                             case_616();
                             break;
                         case 617:
-#line 3177 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = new PEAPI.AssemAttr();
                             }
                             break;
                         case 618:
-#line 3184 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = ((PEAPI.AssemAttr)yyVals[-1 + yyTop]) | PEAPI.AssemAttr.Retargetable;
                             }
                             break;
                         case 621:
-#line 3194 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.ThisAssembly.SetPublicKey((byte[])yyVals[0 + yyTop]);
                             }
                             break;
                         case 622:
-#line 3198 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.ThisAssembly.SetVersion((int)yyVals[-6 + yyTop], (int)yyVals[-4 + yyTop], (int)yyVals[-2 + yyTop], (int)yyVals[0 + yyTop]);
                             }
                             break;
                         case 623:
-#line 3202 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.ThisAssembly.SetLocale((string)yyVals[0 + yyTop]);
                             }
                             break;
                         case 625:
-#line 3207 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.ThisAssembly.SetHashAlgorithm((int)yyVals[0 + yyTop]);
                             }
                             break;
                         case 626:
-#line 3211 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.ThisAssembly.AddCustomAttribute((CustomAttr)yyVals[0 + yyTop]);
                             }
                             break;
                         case 627:
-#line 3215 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 AddSecDecl(yyVals[0 + yyTop], true);
                             }
@@ -3497,31 +3179,26 @@ namespace Mono.ILASM
                             case_635();
                             break;
                         case 638:
-#line 3251 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.CurrentAssemblyRef.SetVersion((int)yyVals[-6 + yyTop], (int)yyVals[-4 + yyTop], (int)yyVals[-2 + yyTop], (int)yyVals[0 + yyTop]);
                             }
                             break;
                         case 639:
-#line 3255 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.CurrentAssemblyRef.SetPublicKey((byte[])yyVals[0 + yyTop]);
                             }
                             break;
                         case 640:
-#line 3259 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.CurrentAssemblyRef.SetPublicKeyToken((byte[])yyVals[0 + yyTop]);
                             }
                             break;
                         case 641:
-#line 3263 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.CurrentAssemblyRef.SetLocale((string)yyVals[0 + yyTop]);
                             }
                             break;
                         case 643:
-#line 3269 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.CurrentAssemblyRef.SetHash((byte[])yyVals[0 + yyTop]);
                             }
@@ -3530,53 +3207,41 @@ namespace Mono.ILASM
                             case_644();
                             break;
                         case 647:
-#line 3284 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 current_extern = new KeyValuePair<string, TypeAttr>((string)yyVals[0 + yyTop], (TypeAttr)yyVals[-1 + yyTop]);
                             }
                             break;
                         case 648:
-#line 3287 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = 0; }
                             break;
                         case 649:
-#line 3288 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-1 + yyTop] | TypeAttr.Private; }
                             break;
                         case 650:
-#line 3289 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-1 + yyTop] | TypeAttr.Public; }
                             break;
                         case 651:
-#line 3290 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-1 + yyTop] | TypeAttr.Forwarder; }
                             break;
                         case 652:
-#line 3291 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-2 + yyTop] | TypeAttr.NestedPublic; }
                             break;
                         case 653:
-#line 3292 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-2 + yyTop] | TypeAttr.NestedPrivate; }
                             break;
                         case 654:
-#line 3293 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-2 + yyTop] | TypeAttr.NestedFamily; }
                             break;
                         case 655:
-#line 3294 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-2 + yyTop] | TypeAttr.NestedAssembly; }
                             break;
                         case 656:
-#line 3295 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-2 + yyTop] | TypeAttr.NestedFamAndAssem; }
                             break;
                         case 657:
-#line 3296 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = (TypeAttr)yyVals[-2 + yyTop] | TypeAttr.NestedFamOrAssem; }
                             break;
                         case 663:
-#line 3309 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 codegen.ExternTable.AddClass(current_extern.Key, current_extern.Value, (string)yyVals[0 + yyTop]);
                             }
@@ -3585,15 +3250,12 @@ namespace Mono.ILASM
                             case_665();
                             break;
                         case 667:
-#line 3327 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = ManifestResource.PublicResource; }
                             break;
                         case 668:
-#line 3328 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = ManifestResource.PrivateResource; }
                             break;
                         case 675:
-#line 3341 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = String.Format("{0}{1}", yyVals[-2 + yyTop], yyVals[0 + yyTop]); }
                             break;
                         case 676:
@@ -3612,11 +3274,9 @@ namespace Mono.ILASM
                             case_682();
                             break;
                         case 683:
-#line 3380 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { }
                             break;
                         case 684:
-#line 3386 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 tokenizer.InByteArray = true;
                             }
@@ -3625,7 +3285,6 @@ namespace Mono.ILASM
                             case_685();
                             break;
                         case 686:
-#line 3394 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             { yyVal = new byte[0]; }
                             break;
                         case 687:
@@ -3638,19 +3297,16 @@ namespace Mono.ILASM
                             case_689();
                             break;
                         case 690:
-#line 3418 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = true;
                             }
                             break;
                         case 691:
-#line 3422 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = false;
                             }
                             break;
                         case 695:
-#line 3433 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
                             {
                                 yyVal = (string)yyVals[-2 + yyTop] + '.' + (string)yyVals[0 + yyTop];
                             }
@@ -3694,14 +3350,12 @@ namespace Mono.ILASM
          All more than 3 lines long rules are wrapped into a method
         */
         void case_17()
-#line 522 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             if (codegen.CurrentCustomAttrTarget != null)
                 codegen.CurrentCustomAttrTarget.AddCustomAttribute((CustomAttr)yyVals[0 + yyTop]);
         }
 
         void case_41()
-#line 590 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             codegen.BeginTypeDef((TypeAttr)yyVals[-4 + yyTop], (string)yyVals[-3 + yyTop],
     yyVals[-1 + yyTop] as BaseClassRef, yyVals[0 + yyTop] as ArrayList, null, (GenericParameters)yyVals[-2 + yyTop]);
@@ -3713,7 +3367,6 @@ namespace Mono.ILASM
         }
 
         void case_42()
-#line 602 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             /* Reset some flags*/
             is_value_class = false;
@@ -3722,7 +3375,6 @@ namespace Mono.ILASM
         }
 
         void case_71()
-#line 646 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList al = new ArrayList();
             al.Add(yyVals[0 + yyTop]);
@@ -3730,7 +3382,6 @@ namespace Mono.ILASM
         }
 
         void case_72()
-#line 652 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList al = (ArrayList)yyVals[-2 + yyTop];
 
@@ -3739,7 +3390,6 @@ namespace Mono.ILASM
         }
 
         void case_77()
-#line 675 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             GenericArguments ga = new GenericArguments();
             ga.Add((BaseTypeRef)yyVals[0 + yyTop]);
@@ -3747,14 +3397,12 @@ namespace Mono.ILASM
         }
 
         void case_78()
-#line 681 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ((GenericArguments)yyVals[-2 + yyTop]).Add((BaseTypeRef)yyVals[0 + yyTop]);
             yyVal = yyVals[-2 + yyTop];
         }
 
         void case_81()
-#line 696 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList al = new ArrayList();
             al.Add(yyVals[0 + yyTop]);
@@ -3762,7 +3410,6 @@ namespace Mono.ILASM
         }
 
         void case_82()
-#line 702 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList al = (ArrayList)yyVals[-2 + yyTop];
             al.Add(yyVals[0 + yyTop]);
@@ -3770,7 +3417,6 @@ namespace Mono.ILASM
         }
 
         void case_85()
-#line 718 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             if (yyVals[0 + yyTop] != null)
                 yyVal = ((BaseClassRef)yyVals[-1 + yyTop]).GetGenericTypeInst((GenericArguments)yyVals[0 + yyTop]);
@@ -3779,21 +3425,18 @@ namespace Mono.ILASM
         }
 
         void case_86()
-#line 725 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             GenParam gpar = new GenParam((int)yyVals[0 + yyTop], "", GenParamType.Var);
             yyVal = new GenericParamRef(gpar, logger, yyVals[0 + yyTop].ToString(), errors);
         }
 
         void case_87()
-#line 730 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             GenParam gpar = new GenParam((int)yyVals[0 + yyTop], "", GenParamType.MVar);
             yyVal = new GenericParamRef(gpar, logger, yyVals[0 + yyTop].ToString(), errors);
         }
 
         void case_88()
-#line 735 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             int num = -1;
             string name = (string)yyVals[0 + yyTop];
@@ -3804,7 +3447,6 @@ namespace Mono.ILASM
         }
 
         void case_89()
-#line 744 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             int num = -1;
             string name = (string)yyVals[0 + yyTop];
@@ -3815,7 +3457,6 @@ namespace Mono.ILASM
         }
 
         void case_90()
-#line 755 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             GenericParameter gp = new GenericParameter((string)yyVals[0 + yyTop], (PEAPI.GenericParamAttributes)yyVals[-2 + yyTop], (ArrayList)yyVals[-1 + yyTop], logger);
 
@@ -3825,7 +3466,6 @@ namespace Mono.ILASM
         }
 
         void case_91()
-#line 763 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             GenericParameters colln = (GenericParameters)yyVals[-4 + yyTop];
             colln.Add(new GenericParameter((string)yyVals[0 + yyTop], (PEAPI.GenericParamAttributes)yyVals[-2 + yyTop], (ArrayList)yyVals[-1 + yyTop], logger));
@@ -3833,7 +3473,6 @@ namespace Mono.ILASM
         }
 
         void case_99()
-#line 803 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             if (codegen.CurrentMethodDef != null)
                 codegen.CurrentCustomAttrTarget = codegen.CurrentMethodDef.GetGenericParam((string)yyVals[0 + yyTop]);
@@ -3847,7 +3486,6 @@ namespace Mono.ILASM
         }
 
         void case_100()
-#line 812 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             int index = ((int)yyVals[-1 + yyTop]);
             if (codegen.CurrentMethodDef != null)
@@ -3862,7 +3500,6 @@ namespace Mono.ILASM
         }
 
         void case_101()
-#line 824 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList class_list = new ArrayList();
             class_list.Add(yyVals[0 + yyTop]);
@@ -3870,14 +3507,12 @@ namespace Mono.ILASM
         }
 
         void case_102()
-#line 830 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList class_list = (ArrayList)yyVals[-2 + yyTop];
             class_list.Add(yyVals[0 + yyTop]);
         }
 
         void case_105()
-#line 844 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             if (codegen.IsThisAssembly((string)yyVals[-2 + yyTop]))
             {
@@ -3890,7 +3525,6 @@ namespace Mono.ILASM
         }
 
         void case_106()
-#line 852 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             if (codegen.IsThisModule((string)yyVals[-2 + yyTop]))
             {
@@ -3903,7 +3537,6 @@ namespace Mono.ILASM
         }
 
         void case_107()
-#line 860 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             PrimitiveTypeRef prim = PrimitiveTypeRef.GetPrimitiveType((string)yyVals[0 + yyTop]);
 
@@ -3914,14 +3547,12 @@ namespace Mono.ILASM
         }
 
         void case_118()
-#line 887 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             if (codegen.CurrentCustomAttrTarget != null)
                 codegen.CurrentCustomAttrTarget.AddCustomAttribute((CustomAttr)yyVals[0 + yyTop]);
         }
 
         void case_122()
-#line 902 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             /**/
             /* My copy of the spec didn't have a type_list but*/
@@ -3947,7 +3578,6 @@ namespace Mono.ILASM
         }
 
         void case_126()
-#line 934 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             BaseClassRef class_ref = (BaseClassRef)yyVals[0 + yyTop];
             class_ref.MakeValueClass();
@@ -3955,7 +3585,6 @@ namespace Mono.ILASM
         }
 
         void case_127()
-#line 940 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ExternTypeRef ext_ref = codegen.ExternTable.GetTypeRef((string)yyVals[-3 + yyTop], (string)yyVals[-1 + yyTop], true);
             if (yyVals[0 + yyTop] != null)
@@ -3965,7 +3594,6 @@ namespace Mono.ILASM
         }
 
         void case_128()
-#line 948 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             TypeRef t_ref = codegen.GetTypeRef((string)yyVals[-1 + yyTop]);
             t_ref.MakeValueClass();
@@ -3976,7 +3604,6 @@ namespace Mono.ILASM
         }
 
         void case_129()
-#line 957 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             BaseTypeRef base_type = (BaseTypeRef)yyVals[-2 + yyTop];
             base_type.MakeArray();
@@ -3984,7 +3611,6 @@ namespace Mono.ILASM
         }
 
         void case_130()
-#line 963 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             BaseTypeRef base_type = (BaseTypeRef)yyVals[-3 + yyTop];
             ArrayList bound_list = (ArrayList)yyVals[-1 + yyTop];
@@ -3993,7 +3619,6 @@ namespace Mono.ILASM
         }
 
         void case_131()
-#line 970 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             BaseTypeRef base_type = (BaseTypeRef)yyVals[-1 + yyTop];
             base_type.MakeManagedPointer();
@@ -4001,7 +3626,6 @@ namespace Mono.ILASM
         }
 
         void case_132()
-#line 976 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             BaseTypeRef base_type = (BaseTypeRef)yyVals[-1 + yyTop];
             base_type.MakeUnmanagedPointer();
@@ -4009,7 +3633,6 @@ namespace Mono.ILASM
         }
 
         void case_133()
-#line 982 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             BaseTypeRef base_type = (BaseTypeRef)yyVals[-1 + yyTop];
             base_type.MakePinned();
@@ -4017,7 +3640,6 @@ namespace Mono.ILASM
         }
 
         void case_134()
-#line 988 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             BaseTypeRef base_type = (BaseTypeRef)yyVals[-4 + yyTop];
             BaseTypeRef class_ref = (BaseTypeRef)yyVals[-1 + yyTop];
@@ -4027,7 +3649,6 @@ namespace Mono.ILASM
         }
 
         void case_135()
-#line 996 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             BaseTypeRef base_type = (BaseTypeRef)yyVals[-4 + yyTop];
             BaseTypeRef class_ref = (BaseTypeRef)yyVals[-1 + yyTop];
@@ -4037,21 +3658,18 @@ namespace Mono.ILASM
         }
 
         void case_152()
-#line 1067 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             /* TODO: Is this the proper full name*/
             yyVal = new PrimitiveTypeRef(PrimitiveType.NativeInt, "System.IntPtr", logger, errors);
         }
 
         void case_155()
-#line 1080 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             yyVal = new PrimitiveTypeRef(PrimitiveType.TypedRef,
                     "System.TypedReference", logger, errors);
         }
 
         void case_161()
-#line 1107 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList bound_list = new ArrayList();
             bound_list.Add(yyVals[0 + yyTop]);
@@ -4059,28 +3677,24 @@ namespace Mono.ILASM
         }
 
         void case_162()
-#line 1113 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList bound_list = (ArrayList)yyVals[-2 + yyTop];
             bound_list.Add(yyVals[0 + yyTop]);
         }
 
         void case_163()
-#line 1120 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             /* This is shortref for no lowerbound or size*/
             yyVal = new DictionaryEntry(TypeRef.Ellipsis, TypeRef.Ellipsis);
         }
 
         void case_164()
-#line 1125 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             /* No lower bound or size*/
             yyVal = new DictionaryEntry(TypeRef.Ellipsis, TypeRef.Ellipsis);
         }
 
         void case_165()
-#line 1130 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             /* Only size specified */
             int size = (int)yyVals[0 + yyTop];
@@ -4093,7 +3707,6 @@ namespace Mono.ILASM
         }
 
         void case_166()
-#line 1141 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             /* lower and upper bound*/
             int lower = (int)yyVals[-2 + yyTop];
@@ -4108,28 +3721,24 @@ namespace Mono.ILASM
         }
 
         void case_167()
-#line 1151 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             /* Just lower bound*/
             yyVal = new DictionaryEntry(yyVals[-1 + yyTop], TypeRef.Ellipsis);
         }
 
         void case_205()
-#line 1295 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             /*FIXME: Allowed only for methods, !fields*/
             yyVal = new NativeArray((NativeType)yyVals[-5 + yyTop], (int)yyVals[-3 + yyTop], (int)yyVals[-1 + yyTop]);
         }
 
         void case_206()
-#line 1300 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             /*FIXME: Allowed only for methods, !fields*/
             yyVal = new NativeArray((NativeType)yyVals[-4 + yyTop], -1, (int)yyVals[-1 + yyTop]);
         }
 
         void case_219()
-#line 1344 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             if (yyVals[0 + yyTop] == null)
                 yyVal = new SafeArray();
@@ -4138,7 +3747,6 @@ namespace Mono.ILASM
         }
 
         void case_277()
-#line 1499 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             FieldDef field_def = new FieldDef((FieldAttr)yyVals[-5 + yyTop],
 (string)yyVals[-3 + yyTop], (BaseTypeRef)yyVals[-4 + yyTop]);
@@ -4162,21 +3770,18 @@ namespace Mono.ILASM
         }
 
         void case_292()
-#line 1575 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             codegen.AddFieldMarshalInfo((NativeType)yyVals[-1 + yyTop]);
             yyVal = (FieldAttr)yyVals[-4 + yyTop] | FieldAttr.HasFieldMarshal;
         }
 
         void case_317()
-#line 1674 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             /* ******** THIS IS NOT IN THE DOCUMENTATION ******** //*/
             yyVal = new StringConst((string)yyVals[0 + yyTop]);
         }
 
         void case_323()
-#line 1701 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             var l = (List<BoolConst>)yyVals[-1 + yyTop];
             l.Add(new BoolConst((bool)yyVals[0 + yyTop]));
@@ -4184,7 +3789,6 @@ namespace Mono.ILASM
         }
 
         void case_324()
-#line 1709 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             DataDef datadef = (DataDef)yyVals[-1 + yyTop];
 
@@ -4206,7 +3810,6 @@ namespace Mono.ILASM
         }
 
         void case_332()
-#line 1750 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList dataitem_list = new ArrayList();
             dataitem_list.Add(yyVals[0 + yyTop]);
@@ -4214,28 +3817,24 @@ namespace Mono.ILASM
         }
 
         void case_333()
-#line 1756 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList list = (ArrayList)yyVals[-2 + yyTop];
             list.Add(yyVals[0 + yyTop]);
         }
 
         void case_336()
-#line 1771 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             /*     DataDef def = codegen.CurrentTypeDef.GetDataDef ((string) $3);*/
             /*     $$ = new AddressConstant ((DataConstant) def.PeapiConstant);*/
         }
 
         void case_338()
-#line 1780 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             /* ******** THIS IS NOT IN THE SPECIFICATION ******** //*/
             yyVal = new ByteArrConst((byte[])yyVals[0 + yyTop]);
         }
 
         void case_339()
-#line 1785 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             double d = (double)yyVals[-2 + yyTop];
             FloatConst float_const = new FloatConst((float)d);
@@ -4247,7 +3846,6 @@ namespace Mono.ILASM
         }
 
         void case_340()
-#line 1795 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             DoubleConst double_const = new DoubleConst((double)yyVals[-2 + yyTop]);
 
@@ -4258,7 +3856,6 @@ namespace Mono.ILASM
         }
 
         void case_341()
-#line 1804 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             IntConst int_const = new IntConst((long)yyVals[-2 + yyTop]);
 
@@ -4269,7 +3866,6 @@ namespace Mono.ILASM
         }
 
         void case_342()
-#line 1813 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             IntConst int_const = new IntConst((int)yyVals[-2 + yyTop]);
 
@@ -4280,7 +3876,6 @@ namespace Mono.ILASM
         }
 
         void case_343()
-#line 1822 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             int i = (int)yyVals[-2 + yyTop];
             IntConst int_const = new IntConst((short)i);
@@ -4292,7 +3887,6 @@ namespace Mono.ILASM
         }
 
         void case_344()
-#line 1832 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             int i = (int)yyVals[-2 + yyTop];
             IntConst int_const = new IntConst((sbyte)i);
@@ -4304,7 +3898,6 @@ namespace Mono.ILASM
         }
 
         void case_345()
-#line 1842 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             FloatConst float_const = new FloatConst(0F);
 
@@ -4315,7 +3908,6 @@ namespace Mono.ILASM
         }
 
         void case_346()
-#line 1851 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             DoubleConst double_const = new DoubleConst(0);
 
@@ -4326,7 +3918,6 @@ namespace Mono.ILASM
         }
 
         void case_347()
-#line 1860 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             IntConst int_const = new IntConst((long)0);
 
@@ -4337,7 +3928,6 @@ namespace Mono.ILASM
         }
 
         void case_348()
-#line 1869 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             IntConst int_const = new IntConst((int)0);
 
@@ -4348,7 +3938,6 @@ namespace Mono.ILASM
         }
 
         void case_349()
-#line 1878 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             IntConst int_const = new IntConst((short)0);
 
@@ -4359,7 +3948,6 @@ namespace Mono.ILASM
         }
 
         void case_350()
-#line 1887 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             IntConst int_const = new IntConst((sbyte)0);
 
@@ -4370,7 +3958,6 @@ namespace Mono.ILASM
         }
 
         void case_352()
-#line 1905 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             CallConv cc = (CallConv)yyVals[-8 + yyTop];
             if (yyVals[-4 + yyTop] != null)
@@ -4389,7 +3976,6 @@ namespace Mono.ILASM
         }
 
         void case_353()
-#line 1923 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             MethodDef methdef = new MethodDef(
                   codegen, (MethAttr)yyVals[-12 + yyTop], (CallConv)yyVals[-11 + yyTop],
@@ -4407,7 +3993,6 @@ namespace Mono.ILASM
         }
 
         void case_374()
-#line 1961 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             pinvoke_info = true;
             pinvoke_mod = (string)yyVals[-4 + yyTop];
@@ -4416,7 +4001,6 @@ namespace Mono.ILASM
         }
 
         void case_375()
-#line 1968 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             pinvoke_info = true;
             pinvoke_mod = (string)yyVals[-2 + yyTop];
@@ -4425,7 +4009,6 @@ namespace Mono.ILASM
         }
 
         void case_376()
-#line 1975 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             pinvoke_info = true;
             pinvoke_mod = null;
@@ -4434,7 +4017,6 @@ namespace Mono.ILASM
         }
 
         void case_416()
-#line 2033 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList sig_list = new ArrayList();
             sig_list.Add(yyVals[0 + yyTop]);
@@ -4442,7 +4024,6 @@ namespace Mono.ILASM
         }
 
         void case_417()
-#line 2039 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList sig_list = (ArrayList)yyVals[-2 + yyTop];
             sig_list.Add(yyVals[0 + yyTop]);
@@ -4450,14 +4031,12 @@ namespace Mono.ILASM
         }
 
         void case_420()
-#line 2055 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             yyVal = new ParamDef((ParamAttr)0, "...", new SentinelTypeRef(logger, errors));
             /* $$ = ParamDef.Ellipsis;*/
         }
 
         void case_421()
-#line 2060 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ParamDef param_def = new ParamDef((ParamAttr)yyVals[-5 + yyTop], null, (BaseTypeRef)yyVals[-4 + yyTop]);
             param_def.AddMarshalInfo((PEAPI.NativeType)yyVals[-1 + yyTop]);
@@ -4466,7 +4045,6 @@ namespace Mono.ILASM
         }
 
         void case_422()
-#line 2067 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ParamDef param_def = new ParamDef((ParamAttr)yyVals[-6 + yyTop], (string)yyVals[0 + yyTop], (BaseTypeRef)yyVals[-5 + yyTop]);
             param_def.AddMarshalInfo((PEAPI.NativeType)yyVals[-2 + yyTop]);
@@ -4475,7 +4053,6 @@ namespace Mono.ILASM
         }
 
         void case_424()
-#line 2080 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList type_list = new ArrayList();
             /* type_list.Add (TypeRef.Ellipsis);*/
@@ -4484,7 +4061,6 @@ namespace Mono.ILASM
         }
 
         void case_425()
-#line 2087 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList type_list = (ArrayList)yyVals[-2 + yyTop];
             /* type_list.Add (TypeRef.Ellipsis);*/
@@ -4493,7 +4069,6 @@ namespace Mono.ILASM
         }
 
         void case_426()
-#line 2094 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList type_list = new ArrayList();
             type_list.Add(yyVals[-1 + yyTop]);
@@ -4501,14 +4076,12 @@ namespace Mono.ILASM
         }
 
         void case_427()
-#line 2100 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList type_list = (ArrayList)yyVals[-4 + yyTop];
             type_list.Add(yyVals[-1 + yyTop]);
         }
 
         void case_432()
-#line 2115 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             codegen.CurrentMethodDef.AddInstr(new
                         EmitByteInstr((int)yyVals[0 + yyTop], tokenizer.Location));
@@ -4516,7 +4089,6 @@ namespace Mono.ILASM
         }
 
         void case_434()
-#line 2125 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             if (yyVals[-1 + yyTop] != null)
             {
@@ -4526,7 +4098,6 @@ namespace Mono.ILASM
         }
 
         void case_435()
-#line 2132 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             if (yyVals[-1 + yyTop] != null)
             {
@@ -4537,7 +4108,6 @@ namespace Mono.ILASM
         }
 
         void case_436()
-#line 2140 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             codegen.CurrentMethodDef.EntryPoint();
             codegen.HasEntryPoint = true;
@@ -4570,7 +4140,6 @@ namespace Mono.ILASM
         }
 
         void case_443()
-#line 2165 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             BaseTypeRef owner = (BaseTypeRef)yyVals[-10 + yyTop];
             ArrayList arg_list = (ArrayList)yyVals[-1 + yyTop];
@@ -4598,7 +4167,6 @@ namespace Mono.ILASM
         }
 
         void case_445()
-#line 2189 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             int index = (int)yyVals[-2 + yyTop];
             ParamDef param = codegen.CurrentMethodDef.GetParam(index);
@@ -4613,14 +4181,12 @@ namespace Mono.ILASM
         }
 
         void case_453()
-#line 2213 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             if (codegen.CurrentCustomAttrTarget != null)
                 codegen.CurrentCustomAttrTarget.AddCustomAttribute((CustomAttr)yyVals[0 + yyTop]);
         }
 
         void case_456()
-#line 2222 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList local_list = new ArrayList();
             local_list.Add(yyVals[0 + yyTop]);
@@ -4640,14 +4206,12 @@ namespace Mono.ILASM
         }
 
         void case_463()
-#line 2259 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             /* This is a reference to a global method in another*/
             /* assembly. This is not supported in the MS version of ilasm*/
         }
 
         void case_464()
-#line 2264 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             string module = (string)yyVals[-1 + yyTop];
 
@@ -4663,7 +4227,6 @@ namespace Mono.ILASM
         }
 
         void case_466()
-#line 2278 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             yyVal = new HandlerBlock((LabelInfo)yyVals[-2 + yyTop],
                     codegen.CurrentMethodDef.AddLabel());
@@ -4671,14 +4234,12 @@ namespace Mono.ILASM
         }
 
         void case_467()
-#line 2286 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             yyVal = codegen.CurrentMethodDef.AddLabel();
             codegen.CurrentMethodDef.BeginLocalsScope();
         }
 
         void case_468()
-#line 2294 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             TryBlock try_block = (TryBlock)yyVals[-1 + yyTop];
 
@@ -4690,7 +4251,6 @@ namespace Mono.ILASM
         }
 
         void case_470()
-#line 2310 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             LabelInfo from = codegen.CurrentMethodDef.AddLabelRef((string)yyVals[-2 + yyTop]);
             LabelInfo to = codegen.CurrentMethodDef.AddLabelRef((string)yyVals[0 + yyTop]);
@@ -4699,7 +4259,6 @@ namespace Mono.ILASM
         }
 
         void case_471()
-#line 2317 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             LabelInfo from = codegen.CurrentMethodDef.AddLabel((int)yyVals[-2 + yyTop]);
             LabelInfo to = codegen.CurrentMethodDef.AddLabel((int)yyVals[0 + yyTop]);
@@ -4708,7 +4267,6 @@ namespace Mono.ILASM
         }
 
         void case_472()
-#line 2326 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList clause_list = new ArrayList();
             clause_list.Add(yyVals[0 + yyTop]);
@@ -4716,14 +4274,12 @@ namespace Mono.ILASM
         }
 
         void case_473()
-#line 2332 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList clause_list = (ArrayList)yyVals[-1 + yyTop];
             clause_list.Add(yyVals[0 + yyTop]);
         }
 
         void case_474()
-#line 2339 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             if (yyVals[-1 + yyTop].GetType() == typeof(PrimitiveTypeRef))
             {
@@ -4738,7 +4294,6 @@ namespace Mono.ILASM
         }
 
         void case_475()
-#line 2349 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             FinallyBlock fb = new FinallyBlock();
             fb.SetHandlerBlock((HandlerBlock)yyVals[0 + yyTop]);
@@ -4746,7 +4301,6 @@ namespace Mono.ILASM
         }
 
         void case_476()
-#line 2355 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             FaultBlock fb = new FaultBlock();
             fb.SetHandlerBlock((HandlerBlock)yyVals[0 + yyTop]);
@@ -4754,14 +4308,12 @@ namespace Mono.ILASM
         }
 
         void case_477()
-#line 2361 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             FilterBlock fb = (FilterBlock)yyVals[-1 + yyTop];
             fb.SetHandlerBlock((HandlerBlock)yyVals[0 + yyTop]);
         }
 
         void case_478()
-#line 2368 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             HandlerBlock block = (HandlerBlock)yyVals[0 + yyTop];
             FilterBlock fb = new FilterBlock(block);
@@ -4769,7 +4321,6 @@ namespace Mono.ILASM
         }
 
         void case_479()
-#line 2374 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             LabelInfo from = codegen.CurrentMethodDef.AddLabelRef((string)yyVals[0 + yyTop]);
             FilterBlock fb = new FilterBlock(new HandlerBlock(from, null));
@@ -4777,7 +4328,6 @@ namespace Mono.ILASM
         }
 
         void case_480()
-#line 2380 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             LabelInfo from = codegen.CurrentMethodDef.AddLabel((int)yyVals[0 + yyTop]);
             FilterBlock fb = new FilterBlock(new HandlerBlock(from, null));
@@ -4785,7 +4335,6 @@ namespace Mono.ILASM
         }
 
         void case_482()
-#line 2392 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             LabelInfo from = codegen.CurrentMethodDef.AddLabelRef((string)yyVals[-2 + yyTop]);
             LabelInfo to = codegen.CurrentMethodDef.AddLabelRef((string)yyVals[0 + yyTop]);
@@ -4794,7 +4343,6 @@ namespace Mono.ILASM
         }
 
         void case_483()
-#line 2399 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             LabelInfo from = codegen.CurrentMethodDef.AddLabel((int)yyVals[-2 + yyTop]);
             LabelInfo to = codegen.CurrentMethodDef.AddLabel((int)yyVals[0 + yyTop]);
@@ -4803,21 +4351,18 @@ namespace Mono.ILASM
         }
 
         void case_484()
-#line 2408 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             codegen.CurrentMethodDef.AddInstr(
                     new SimpInstr((Op)yyVals[0 + yyTop], tokenizer.Location));
         }
 
         void case_485()
-#line 2413 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             codegen.CurrentMethodDef.AddInstr(
                     new IntInstr((IntOp)yyVals[-1 + yyTop], (int)yyVals[0 + yyTop], tokenizer.Location));
         }
 
         void case_486()
-#line 2418 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             int slot = codegen.CurrentMethodDef.GetNamedLocalSlot((string)yyVals[0 + yyTop]);
             if (slot < 0)
@@ -4830,7 +4375,6 @@ namespace Mono.ILASM
         }
 
         void case_487()
-#line 2426 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             codegen.CurrentMethodDef.AddInstr(
                     new IntInstr((IntOp)yyVals[-1 + yyTop], (int)yyVals[0 + yyTop], tokenizer.Location));
@@ -4851,14 +4395,12 @@ namespace Mono.ILASM
         }
 
         void case_489()
-#line 2440 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             codegen.CurrentMethodDef.AddInstr(new
                     IntInstr((IntOp)yyVals[-1 + yyTop], (int)yyVals[0 + yyTop], tokenizer.Location));
         }
 
         void case_490()
-#line 2445 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             int slot = codegen.CurrentMethodDef.GetNamedLocalSlot((string)yyVals[0 + yyTop]);
             if (slot < 0)
@@ -4871,7 +4413,6 @@ namespace Mono.ILASM
         }
 
         void case_491()
-#line 2453 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             if (yyVals[-1 + yyTop] is MiscInstr)
             {
@@ -4886,7 +4427,6 @@ namespace Mono.ILASM
         }
 
         void case_492()
-#line 2464 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             switch ((MiscInstr)yyVals[-1 + yyTop])
             {
@@ -4898,7 +4438,6 @@ namespace Mono.ILASM
         }
 
         void case_493()
-#line 2473 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             long l = (long)yyVals[0 + yyTop];
 
@@ -4951,7 +4490,6 @@ namespace Mono.ILASM
         }
 
         void case_495()
-#line 2506 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             LabelInfo target = codegen.CurrentMethodDef.AddLabel((int)yyVals[0 + yyTop]);
             codegen.CurrentMethodDef.AddInstr(new BranchInstr((BranchOp)yyVals[-1 + yyTop],
@@ -4959,7 +4497,6 @@ namespace Mono.ILASM
         }
 
         void case_496()
-#line 2512 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             LabelInfo target = codegen.CurrentMethodDef.AddLabelRef((string)yyVals[0 + yyTop]);
             codegen.CurrentMethodDef.AddInstr(new BranchInstr((BranchOp)yyVals[-1 + yyTop],
@@ -4976,7 +4513,6 @@ namespace Mono.ILASM
         }
 
         void case_498()
-#line 2523 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
 
             BaseTypeRef owner = (BaseTypeRef)yyVals[-2 + yyTop];
@@ -4990,7 +4526,6 @@ namespace Mono.ILASM
         }
 
         void case_499()
-#line 2535 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             GlobalFieldRef fieldref = codegen.GetGlobalFieldRef((BaseTypeRef)yyVals[-1 + yyTop], (string)yyVals[0 + yyTop]);
 
@@ -5007,14 +4542,12 @@ namespace Mono.ILASM
         }
 
         void case_501()
-#line 2546 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             if ((MiscInstr)yyVals[-1 + yyTop] == MiscInstr.ldstr)
                 codegen.CurrentMethodDef.AddInstr(new LdstrInstr((string)yyVals[0 + yyTop], tokenizer.Location));
         }
 
         void case_502()
-#line 2551 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             byte[] bs = (byte[])yyVals[0 + yyTop];
             if ((MiscInstr)yyVals[-3 + yyTop] == MiscInstr.ldstr)
@@ -5022,7 +4555,6 @@ namespace Mono.ILASM
         }
 
         void case_503()
-#line 2557 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             byte[] bs = (byte[])yyVals[0 + yyTop];
             if ((MiscInstr)yyVals[-2 + yyTop] == MiscInstr.ldstr)
@@ -5030,7 +4562,6 @@ namespace Mono.ILASM
         }
 
         void case_504()
-#line 2563 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList arg_list = (ArrayList)yyVals[-1 + yyTop];
             BaseTypeRef[] arg_array = null;
@@ -5043,7 +4574,6 @@ namespace Mono.ILASM
         }
 
         void case_505()
-#line 2574 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             if ((MiscInstr)yyVals[-1 + yyTop] == MiscInstr.ldtoken)
             {
@@ -5058,7 +4588,6 @@ namespace Mono.ILASM
         }
 
         void case_507()
-#line 2593 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList arg_list = (ArrayList)yyVals[-1 + yyTop];
             GenericArguments ga = (GenericArguments)yyVals[-3 + yyTop];
@@ -5118,7 +4647,6 @@ namespace Mono.ILASM
         }
 
         void case_510()
-#line 2648 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList label_list = new ArrayList();
             label_list.Add(codegen.CurrentMethodDef.AddLabelRef((string)yyVals[0 + yyTop]));
@@ -5126,7 +4654,6 @@ namespace Mono.ILASM
         }
 
         void case_511()
-#line 2654 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList label_list = new ArrayList();
             label_list.Add(yyVals[0 + yyTop]);
@@ -5134,21 +4661,18 @@ namespace Mono.ILASM
         }
 
         void case_512()
-#line 2660 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList label_list = (ArrayList)yyVals[-2 + yyTop];
             label_list.Add(codegen.CurrentMethodDef.AddLabelRef((string)yyVals[0 + yyTop]));
         }
 
         void case_513()
-#line 2665 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList label_list = (ArrayList)yyVals[-2 + yyTop];
             label_list.Add(yyVals[0 + yyTop]);
         }
 
         void case_517()
-#line 2680 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             BaseTypeRef owner = (BaseTypeRef)yyVals[-2 + yyTop];
 
@@ -5157,7 +4681,6 @@ namespace Mono.ILASM
         }
 
         void case_520()
-#line 2699 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             EventDef event_def = new EventDef((FeatureAttr)yyVals[-2 + yyTop],
                     (BaseTypeRef)yyVals[-1 + yyTop], (string)yyVals[0 + yyTop], logger, errors);
@@ -5166,42 +4689,36 @@ namespace Mono.ILASM
         }
 
         void case_527()
-#line 2727 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             codegen.CurrentTypeDef.CurrentEvent.AddAddon(
                     (MethodRef)yyVals[-1 + yyTop]);
         }
 
         void case_528()
-#line 2732 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             codegen.CurrentTypeDef.CurrentEvent.AddRemoveon(
                     (MethodRef)yyVals[-1 + yyTop]);
         }
 
         void case_529()
-#line 2737 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             codegen.CurrentTypeDef.CurrentEvent.AddFire(
                     (MethodRef)yyVals[-1 + yyTop]);
         }
 
         void case_530()
-#line 2742 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             codegen.CurrentTypeDef.CurrentEvent.AddOther(
                     (MethodRef)yyVals[-1 + yyTop]);
         }
 
         void case_531()
-#line 2747 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             if (codegen.CurrentCustomAttrTarget != null)
                 codegen.CurrentCustomAttrTarget.AddCustomAttribute((CustomAttr)yyVals[0 + yyTop]);
         }
 
         void case_535()
-#line 2762 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             PropertyDef prop_def = new PropertyDef((FeatureAttr)yyVals[-6 + yyTop], (BaseTypeRef)yyVals[-5 + yyTop],
                     (string)yyVals[-4 + yyTop], (ArrayList)yyVals[-2 + yyTop], logger, errors);
@@ -5215,14 +4732,12 @@ namespace Mono.ILASM
         }
 
         void case_545()
-#line 2809 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             if (codegen.CurrentCustomAttrTarget != null)
                 codegen.CurrentCustomAttrTarget.AddCustomAttribute((CustomAttr)yyVals[0 + yyTop]);
         }
 
         void case_555()
-#line 2842 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             var l = (List<BoolConst>)yyVals[-1 + yyTop];
             yyVal = new ArrayConstant(l?.ToArray())
@@ -5232,14 +4747,12 @@ namespace Mono.ILASM
         }
 
         void case_558()
-#line 2857 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             var c = yyVals[0 + yyTop] as Constant;
             yyVal = c ?? new ArrayConstant(((List<DataConstant>)yyVals[0 + yyTop]).ToArray());
         }
 
         void case_560()
-#line 2866 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             var l = yyVals[-1 + yyTop] as List<DataConstant>;
             if (l == null)
@@ -5254,7 +4767,6 @@ namespace Mono.ILASM
         }
 
         void case_563()
-#line 2889 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             BaseTypeRef owner = (BaseTypeRef)yyVals[-5 + yyTop];
             ArrayList arg_list = (ArrayList)yyVals[-1 + yyTop];
@@ -5270,7 +4782,6 @@ namespace Mono.ILASM
         }
 
         void case_564()
-#line 2903 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList arg_list = (ArrayList)yyVals[-1 + yyTop];
             BaseTypeRef[] param_list;
@@ -5297,7 +4808,6 @@ namespace Mono.ILASM
         }
 
         void case_570()
-#line 2945 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList list = new ArrayList();
             list.Add(yyVals[0 + yyTop]);
@@ -5305,7 +4815,6 @@ namespace Mono.ILASM
         }
 
         void case_571()
-#line 2951 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList list = (ArrayList)yyVals[-2 + yyTop];
             list.Add(yyVals[0 + yyTop]);
@@ -5313,7 +4822,6 @@ namespace Mono.ILASM
         }
 
         void case_573()
-#line 2965 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList list = new ArrayList();
             list.Add(yyVals[0 + yyTop]);
@@ -5321,7 +4829,6 @@ namespace Mono.ILASM
         }
 
         void case_574()
-#line 2971 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList list = (ArrayList)yyVals[-1 + yyTop];
             list.Add(yyVals[0 + yyTop]);
@@ -5329,21 +4836,18 @@ namespace Mono.ILASM
         }
 
         void case_575()
-#line 2979 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             NameValuePair pair = (NameValuePair)yyVals[0 + yyTop];
             yyVal = new PermissionMember((MemberTypes)yyVals[-2 + yyTop], (BaseTypeRef)yyVals[-1 + yyTop], pair.Name, pair.Value);
         }
 
         void case_576()
-#line 2984 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             NameValuePair pair = (NameValuePair)yyVals[0 + yyTop];
             yyVal = new PermissionMember((MemberTypes)yyVals[-3 + yyTop], (BaseTypeRef)yyVals[-1 + yyTop], pair.Name, pair.Value);
         }
 
         void case_580()
-#line 3007 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList pairs = new ArrayList();
             pairs.Add(yyVals[0 + yyTop]);
@@ -5351,7 +4855,6 @@ namespace Mono.ILASM
         }
 
         void case_581()
-#line 3013 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList pairs = (ArrayList)yyVals[-2 + yyTop];
             pairs.Add(yyVals[0 + yyTop]);
@@ -5359,21 +4862,18 @@ namespace Mono.ILASM
         }
 
         void case_610()
-#line 3133 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             /* We need to compute the hash ourselves. :-(*/
             /* AssemblyName an = AssemblyName.GetName ((string) $3);*/
         }
 
         void case_615()
-#line 3160 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             codegen.CurrentCustomAttrTarget = null;
             codegen.CurrentDeclSecurityTarget = null;
         }
 
         void case_616()
-#line 3167 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             codegen.SetThisAssembly((string)yyVals[0 + yyTop], (PEAPI.AssemAttr)yyVals[-1 + yyTop]);
             codegen.CurrentCustomAttrTarget = codegen.ThisAssembly;
@@ -5381,7 +4881,6 @@ namespace Mono.ILASM
         }
 
         void case_634()
-#line 3229 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             System.Reflection.AssemblyName asmb_name =
 new System.Reflection.AssemblyName();
@@ -5390,7 +4889,6 @@ new System.Reflection.AssemblyName();
         }
 
         void case_635()
-#line 3236 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             System.Reflection.AssemblyName asmb_name =
 new System.Reflection.AssemblyName();
@@ -5399,7 +4897,6 @@ new System.Reflection.AssemblyName();
         }
 
         void case_644()
-#line 3271 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             if (codegen.CurrentCustomAttrTarget != null)
                 codegen.CurrentCustomAttrTarget.AddCustomAttribute((CustomAttr)yyVals[0 + yyTop]);
@@ -5420,7 +4917,6 @@ new System.Reflection.AssemblyName();
         }
 
         void case_676()
-#line 3345 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             long l = (long)yyVals[0 + yyTop];
             byte[] intb = BitConverter.GetBytes(l);
@@ -5428,7 +4924,6 @@ new System.Reflection.AssemblyName();
         }
 
         void case_679()
-#line 3357 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             int i = (int)yyVals[-1 + yyTop];
             byte[] intb = BitConverter.GetBytes(i);
@@ -5436,7 +4931,6 @@ new System.Reflection.AssemblyName();
         }
 
         void case_680()
-#line 3363 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             long l = (long)yyVals[-1 + yyTop];
             byte[] intb = BitConverter.GetBytes(l);
@@ -5444,35 +4938,30 @@ new System.Reflection.AssemblyName();
         }
 
         void case_681()
-#line 3369 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             byte[] intb = BitConverter.GetBytes((long)yyVals[-1 + yyTop]);
             yyVal = BitConverter.ToDouble(intb, 0);
         }
 
         void case_682()
-#line 3374 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             byte[] intb = BitConverter.GetBytes((int)yyVals[-1 + yyTop]);
             yyVal = (double)BitConverter.ToSingle(intb, 0);
         }
 
         void case_685()
-#line 3388 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             yyVal = yyVals[-1 + yyTop];
             tokenizer.InByteArray = false;
         }
 
         void case_687()
-#line 3396 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList byte_list = (ArrayList)yyVals[0 + yyTop];
             yyVal = byte_list.ToArray(typeof(byte));
         }
 
         void case_688()
-#line 3403 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList byte_list = new ArrayList();
             byte_list.Add(Convert.ToByte(yyVals[0 + yyTop]));
@@ -5480,7 +4969,6 @@ new System.Reflection.AssemblyName();
         }
 
         void case_689()
-#line 3409 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
         {
             ArrayList byte_list = (ArrayList)yyVals[-1 + yyTop];
             byte_list.Add(Convert.ToByte(yyVals[0 + yyTop]));
@@ -7496,7 +6984,6 @@ new System.Reflection.AssemblyName();
   364,   -1,   -1,  367,   -1,  369,
   };
 
-#line 3447 "C:\Apps\mono\mcs\ilasm\parser\ILParser.jay"
 
     }
 
